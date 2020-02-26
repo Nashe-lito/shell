@@ -1,4 +1,15 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "io.qameta.allure:allure-gradle:2.3"
+    }
+}
+
+
 apply plugin: 'java'
+  apply plugin: 'io.qameta.allure'
 
 
 repositories {
@@ -19,8 +30,15 @@ dependencies {
 
     compile 'io.rest-assured:spring-web-test-client:4.2.0'
 
-  //  implementation 'io.qameta.allure:allure-testng:2.13.2'
+  implementation 'io.qameta.allure:allure-testng:2.13.2'
+  
 }
 
 
+allure {
+    version = '2.2.1'
+   // autoconfigure = true
+    aspectjweaver = true
+    allureJavaVersion = 2.13
+}
 

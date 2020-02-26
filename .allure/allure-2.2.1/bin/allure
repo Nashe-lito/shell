@@ -2,7 +2,7 @@
 
 ##############################################################################
 ##
-##  Gradle start up script for UN*X
+##  allure start up script for UN*X
 ##
 ##############################################################################
 
@@ -20,14 +20,14 @@ while [ -h "$PRG" ] ; do
     fi
 done
 SAVED="`pwd`"
-cd "`dirname \"$PRG\"`/" >/dev/null
-APP_HOME="`pwd -P`"
+cd "`dirname \"$PRG\"`/.." >/dev/null
+export APP_HOME="`pwd -P`"
 cd "$SAVED" >/dev/null
 
-APP_NAME="Gradle"
+APP_NAME="allure"
 APP_BASE_NAME=`basename "$0"`
 
-# Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
+# Add default JVM options here. You can also use JAVA_OPTS and ALLURE_OPTS to pass JVM options to this script.
 DEFAULT_JVM_OPTS=""
 
 # Use the maximum available, or set MAX_FD != -1 to use that value.
@@ -64,7 +64,7 @@ case "`uname`" in
     ;;
 esac
 
-CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
+CLASSPATH=$APP_HOME/lib/commons-io-2.5.jar:$APP_HOME/lib/javax.servlet-api-3.1.0.jar:$APP_HOME/lib/config:$APP_HOME/lib/flexmark-0.19.4.jar:$APP_HOME/lib/log4j-1.2.17.jar:$APP_HOME/lib/jackson-dataformat-yaml-2.8.6.jar:$APP_HOME/lib/jackson-core-2.8.6.jar:$APP_HOME/lib/allure-generator-2.2.1.jar:$APP_HOME/lib/snakeyaml-1.17.jar:$APP_HOME/lib/jetty-http-9.2.2.v20140723.jar:$APP_HOME/lib/flexmark-util-0.19.4.jar:$APP_HOME/lib/allure-plugin-api-2.2.1.jar:$APP_HOME/lib/jackson-databind-2.8.6.jar:$APP_HOME/lib/allure-commandline-2.2.1.jar:$APP_HOME/lib/properties-2.0.RC5.jar:$APP_HOME/lib/allure2-model-jackson-1.0-BETA4.jar:$APP_HOME/lib/jetty-server-9.2.2.v20140723.jar:$APP_HOME/lib/jackson-module-jaxb-annotations-2.8.6.jar:$APP_HOME/lib/jaxb-utils-1.0.jar:$APP_HOME/lib/allure2-model-pojo-1.0-BETA4.jar:$APP_HOME/lib/allure1-model-1.0.jar:$APP_HOME/lib/jackson-annotations-2.8.0.jar:$APP_HOME/lib/slf4j-log4j12-1.7.21.jar:$APP_HOME/lib/jcommander-1.64.jar:$APP_HOME/lib/slf4j-api-1.7.21.jar:$APP_HOME/lib/freemarker-2.3.23.jar:$APP_HOME/lib/jetty-io-9.2.2.v20140723.jar:$APP_HOME/lib/tika-core-1.14.jar:$APP_HOME/lib/jetty-util-9.2.2.v20140723.jar:$APP_HOME/lib/allure2-model-api-1.0-BETA4.jar
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then
@@ -162,10 +162,10 @@ save () {
 APP_ARGS=$(save "$@")
 
 # Collect all arguments for the java command, following the shell quoting and substitution rules
-eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS "\"-Dorg.gradle.appname=$APP_BASE_NAME\"" -classpath "\"$CLASSPATH\"" org.gradle.wrapper.GradleWrapperMain "$APP_ARGS"
+eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $ALLURE_OPTS -classpath "\"$CLASSPATH\"" io.qameta.allure.CommandLine "$APP_ARGS"
 
 # by default we should be in the correct project dir, but when run from Finder on Mac, the cwd is wrong
-if [ "$(uname)" = "Darwin" ] && [ "$HOME" = "$PWD" ]; then
+if [ "" ] && [ "$HOME" = "$PWD" ]; then
   cd "$(dirname "$0")"
 fi
 

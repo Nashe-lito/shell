@@ -13,10 +13,11 @@ public class SessionHelper extends HelperBase {
 
   public void login(String authUsername, String authPassword) {
     driver.get("https://shell-b2b.test.aurocraft.com/uk/auth");
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  //  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     type(By.xpath("//input[@class='c-input']"), authUsername);
     type(By.xpath("//input[@class='c-password__input']"), authPassword);
     click(By.xpath("//button[@class='c-button c-button--primary']"));
     waitAfterLogin(By.xpath("//div[@class='m-layout__sidebar']//div[1]//a[2]//p[1]"));
   }
 }
+

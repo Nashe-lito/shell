@@ -103,7 +103,7 @@ public class UserHelper extends HelperBase {
     click(By.xpath("//div[@class='c-page-header__actions']//div[2]"));
   }
 
-/*  public void submitUserModification(Не используем сейчас) {
+/*  public void submitUserModification() {
     click(By.xpath("//button[@class='c-button c-button--primary']"));
   }*/
 

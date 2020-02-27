@@ -9,16 +9,22 @@ buildscript {
 
 
 apply plugin: 'java'
-  apply plugin: 'io.qameta.allure'
+apply plugin: 'io.qameta.allure'
 
 
 repositories {
     mavenCentral()
 }
 
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile){
+        options.compilerArgs << "-Xlint:deprecation"
+    }
+}
+
 dependencies {
     compile 'org.testng:testng:7.1.0'
-    compile 'org.seleniumhq.selenium:selenium-java:4.0.0-alpha-4'
+    compile 'org.seleniumhq.selenium:selenium-java:3.141.59'
     implementation 'org.hamcrest:hamcrest:2.1'
     implementation 'com.beust:jcommander:1.72'
     implementation 'com.thoughtworks.xstream:xstream:1.4.11.1'
@@ -30,15 +36,13 @@ dependencies {
 
     compile 'io.rest-assured:spring-web-test-client:4.2.0'
 
-  implementation 'io.qameta.allure:allure-testng:2.13.2'
-  
+    implementation 'io.qameta.allure:allure-testng:2.13.2'
 }
 
 
 allure {
     version = '2.2.1'
-   // autoconfigure = true
+    autoconfigure = true
     aspectjweaver = true
-    allureJavaVersion = 2.13
+    allureJavaVersion = '2.0-BETA9'
 }
-

@@ -82,13 +82,9 @@ public class UserHelper extends HelperBase {
     click(By.xpath("//span/div/div[2]/div/div[2]/p"));
   }
 
-  public void goToLockUsersPage() {
-    click(By.xpath("//div[@class='c-tabs c-tabs--full']//div[3]//p[1]"));
-  }
-
   public void confirmDeteleUser() {
+    click(By.xpath("//div[@class='c-button c-button--primary']//span[@class='c-button__label']"));
     click(By.xpath("//div[@class='c-button c-button--primary']"));
-    click(By.xpath("//div[@id='overlay-root']/div/div[4]/div/div/div[2]/div/div"));
   }
 
   public void clickDeleteLinkUsersPage() {
@@ -127,5 +123,26 @@ public class UserHelper extends HelperBase {
     type(By.xpath("//*[@id='root']/div/div[3]/div/div/div[2]/div/div/div[2]/div/div[1]/div/div[5]/div[1]/label/div/input"), passwordMode);
 
     type(By.xpath("//*[@id='root']/div/div[3]/div/div/div[2]/div/div/div[2]/div/div[1]/div/div[5]/div[2]/label/div/input"), passwordMode);
+  }
+
+  public void clickOK() {
+    click(By.xpath("//div[@class='c-button c-button--primary']"));
+  }
+
+  public void createUser(String createName, String createSurname, String createRole, String createTel, String createPassword) {
+    goToCreateUserPage();
+    fillUserForm(new UserData("Name", "Surname", "accountant", "+380987165311", "12345678"));
+    submitFormButton();
+  }
+
+  public boolean isThereAUser() {
+    return isElementPresent(By.xpath("//div[@id='root']/div/div[3]/div/div/div[2]/div[2]/div[2]/div[6]/span/div/div/span"));
+  }
+
+  public void lockUser() {
+    openPopoverOnUsersPage();
+    clickOnLockLinkOnUsersPage();
+    confirmAction();
+    clickOK();
   }
 }

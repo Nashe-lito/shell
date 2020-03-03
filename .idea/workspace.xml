@@ -2,88 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aaa3d8ee-0ff4-46e9-bf31-477a5eadbec4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_25_0_jre.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_qameta_allure_allure_junit4_2_0_BETA9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_qameta_allure_allure_junit4_aspect_2_0_BETA9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_1_8_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_checkerframework_checker_compat_qual_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_api_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_ie_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_java_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_support_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_auto_auto_common_0_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_auto_service_auto_service_1_0_rc6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_auto_service_auto_service_annotations_1_0_rc6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_errorprone_error_prone_annotations_2_3_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_errorprone_error_prone_annotations_2_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_failureaccess_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_28_2_jre.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_j2objc_j2objc_annotations_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_4_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_2_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sun_activation_javax_activation_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_typesafe_netty_netty_reactive_streams_2_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_buffer_4_1_43_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_codec_4_1_43_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_codec_dns_4_1_42_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_codec_http_4_1_42_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_codec_socks_4_1_42_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_common_4_1_43_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_handler_4_1_43_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_handler_proxy_4_1_42_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_resolver_4_1_43_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_resolver_dns_4_1_42_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_transport_4_1_43_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_42_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_transport_native_kqueue_osx_x86_64_4_1_42_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_netty_netty_transport_native_unix_common_4_1_42_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_opentracing_opentracing_api_0_33_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_1_10_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_asynchttpclient_async_http_client_2_10_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_asynchttpclient_async_http_client_netty_utils_2_10_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_checkerframework_checker_qual_2_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_61.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_61.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_reactivestreams_reactive_streams_1_0_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_reactivestreams_reactive_streams_1_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_api_4_0_0_alpha_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_chrome_driver_4_0_0_alpha_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_chrome_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_chromium_driver_4_0_0_alpha_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_devtools_4_0_0_alpha_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_edge_driver_4_0_0_alpha_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_edge_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_edgehtml_driver_4_0_0_alpha_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_firefox_driver_4_0_0_alpha_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_firefox_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_firefox_xpi_driver_4_0_0_alpha_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_http_4_0_0_alpha_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_ie_driver_4_0_0_alpha_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_java_4_0_0_alpha_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_json_4_0_0_alpha_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_opera_driver_4_0_0_alpha_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_opera_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_remote_driver_4_0_0_alpha_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_remote_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_safari_driver_4_0_0_alpha_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_safari_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_seleniumhq_selenium_selenium_support_4_0_0_alpha_4.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/DocumentHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/DriverHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/cards/tests/CreateApplyForNewCardsTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/cards/tests/SearchCardTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/cards/tests/TieDriverToCardTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/CreateDriversTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/DeleteAndBlockDriversTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/ModificationDriversTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/documents/tests/DocumentTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_qameta_allure_allure_junit4_2_0_BETA9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_qameta_allure_allure_junit4_aspect_2_0_BETA9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/shell.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/shell.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/shell.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/shell.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/resources/allure.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromedriver" beforeDir="false" afterPath="$PROJECT_DIR$/chromedriver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/CompanyPageHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/CompanyPageHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/HelperBaseAdm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/HelperBaseAdm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/CompanyTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/CompanyTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/CardHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/CardHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/NavigationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/NavigationHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/UserHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/UserHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/allure.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/base/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/cards/CreateApplyForNewCardsTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/cards/SearchCardTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/DeleteAndBlockUsersTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/DeleteAndBlockUsersTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/ModificationUsersTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/ModificationUsersTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +57,83 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shell" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shell" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shell" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shell" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shell" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="test" type="396b929e:GradleViewContributor$SourceSetNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shell" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="test" type="396b929e:GradleViewContributor$SourceSetNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shell" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shell" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shell" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shell" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shell" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="help" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shell" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="shell" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -123,33 +148,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>//div[@class='c-table c-table--with-more']//div[2]//div[6]//span[1]//div[1]//div[1]//span[1]</find>
-      <find>log</find>
-      <find>//button[@class='c-button c-button--primary']</find>
-      <find>openPopoverOnUsersPage</find>
-      <find>cceptNextAlert</find>
-      <find>//span[@class='c-icon c-icon--close']</find>
-      <find>driver.findElement(By.xpath(&quot;//button[@class='c-button c-button--primary']&quot;)).click();</find>
-      <find>fillFieldClientName</find>
-      <find>driver.findElement(By.id(&quot;status&quot;)).click();</find>
-      <find>selectStatus</find>
-      <find>clientId</find>
-      <find>clientName</find>
-      <find>cardNumber</find>
-      <find>managerId</find>
-      <find>selectS</find>
-      <find>Stat</find>
-      <find>@class='c-button c-button--primary']&quot;))</find>
-      <find>driver.findElement(By.id(&quot;type&quot;)).click();</find>
-      <find>companyPa</find>
-      <find>companybut</find>
-      <find>driver.navigate().to(&quot;https://shell-b2b.test.aurocraft.com/admin/clients/user/list&quot;);</find>
-      <find>//tr[1]/td[9]/div/a</find>
-      <find>4.2.3.</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -169,10 +167,10 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582800015818" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -187,106 +185,114 @@
       <recent name="acceptance" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.FiltersTests.testFiltersOnTheCompanyPage">
-    <configuration name="shell [allureReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.DeleteAndBlockUsersTests.testUnblockUserFromModifyPage">
+    <configuration name="DeleteAndBlockUsersTests.testBlockUserFromModifyPage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--tests &quot;acceptance.frontend.company.tests.DeleteAndBlockUsersTests.testBlockUserFromModifyPage&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="allureReport" />
+            <option value=":cleanTest" />
+            <option value=":test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="shell [allureServe]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DeleteAndBlockUsersTests.testDeleteUserThroughTable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--tests &quot;acceptance.frontend.company.tests.DeleteAndBlockUsersTests.testDeleteUserThroughTable&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="allureServe" />
+            <option value=":cleanTest" />
+            <option value=":test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AuthTests.testAuth" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shell.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="acceptance.frontend.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="acceptance.frontend" />
-      <option name="MAIN_CLASS_NAME" value="acceptance.frontend.AuthTests" />
-      <option name="METHOD_NAME" value="testAuth" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="DeleteAndBlockUsersTests.testUnblockUserFromModifyPage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;acceptance.frontend.company.tests.DeleteAndBlockUsersTests.testUnblockUserFromModifyPage&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="CompanyTests.testSendRegisterLinkForCompany" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shell.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="acceptance.backend.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="acceptance.backend.tests" />
-      <option name="MAIN_CLASS_NAME" value="acceptance.backend.tests.CompanyTests" />
-      <option name="METHOD_NAME" value="testSendRegisterLinkForCompany" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="DeleteAndBlockUsersTests.testUnblockedUserThroughTable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;acceptance.frontend.company.tests.DeleteAndBlockUsersTests.testUnblockedUserThroughTable&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="FiltersTests.testFiltersOnTheCompanyPage" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shell.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="acceptance.backend.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="acceptance.backend.tests" />
-      <option name="MAIN_CLASS_NAME" value="acceptance.backend.tests.FiltersTests" />
-      <option name="METHOD_NAME" value="testFiltersOnTheCompanyPage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Tests in 'acceptance.frontend.company.tests'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;acceptance.frontend.company.tests.*&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.FiltersTests.testFiltersOnTheCompanyPage" />
-        <item itemvalue="TestNG.AuthTests.testAuth" />
-        <item itemvalue="Gradle.shell [allureServe]" />
-        <item itemvalue="Gradle.shell [allureReport]" />
-        <item itemvalue="TestNG.CompanyTests.testSendRegisterLinkForCompany" />
+        <item itemvalue="Gradle.DeleteAndBlockUsersTests.testUnblockUserFromModifyPage" />
+        <item itemvalue="Gradle.Tests in 'acceptance.frontend.company.tests'" />
+        <item itemvalue="Gradle.DeleteAndBlockUsersTests.testDeleteUserThroughTable" />
+        <item itemvalue="Gradle.DeleteAndBlockUsersTests.testUnblockedUserThroughTable" />
+        <item itemvalue="Gradle.DeleteAndBlockUsersTests.testBlockUserFromModifyPage" />
       </list>
     </recent_temporary>
   </component>
@@ -303,38 +309,6 @@
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="UsersCompanyTests_testModifyUser - 2020.02.25 at 14h 09m 26s.xml">
-      <configuration name="UsersCompanyTests.testModifyUser" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="UsersCompanyTests - 2020.02.25 at 14h 10m 56s.xml">
-      <configuration name="UsersCompanyTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="FiltersTests - 2020.02.25 at 15h 10m 32s.xml">
-      <configuration name="FiltersTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="UsersCompanyTests_testModifyUser - 2020.02.25 at 15h 40m 46s.xml">
-      <configuration name="UsersCompanyTests.testModifyUser" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DeleteAndBlockUsersTests_testUnblockedUserThroughTable - 2020.02.26 at 09h 54m 10s.xml">
-      <configuration name="DeleteAndBlockUsersTests.testUnblockedUserThroughTable" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DeleteAndBlockUsersTests_testUnblockedUserThroughTable - 2020.02.26 at 09h 55m 45s.xml">
-      <configuration name="DeleteAndBlockUsersTests.testUnblockedUserThroughTable" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DeleteAndBlockUsersTests_testUnblockedUserThroughTable - 2020.02.26 at 09h 56m 54s.xml">
-      <configuration name="DeleteAndBlockUsersTests.testUnblockedUserThroughTable" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="CompanyTests_testSendRegisterLinkForCompany - 2020.02.26 at 14h 55m 10s.xml">
-      <configuration name="CompanyTests.testSendRegisterLinkForCompany" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="FiltersTests_testFiltersOnTheCompanyPage - 2020.02.26 at 15h 05m 30s.xml">
-      <configuration name="FiltersTests.testFiltersOnTheCompanyPage" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="AuthTests_testAuth - 2020.02.26 at 16h 49m 59s.xml">
-      <configuration name="AuthTests.testAuth" configurationId="TestNG" />
-    </history-entry>
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -349,22 +323,66 @@
       <screen x="1440" y="90" width="1920" height="1057" />
     </state>
     <state x="2054" y="311" key="#Project_Structure/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1582803157806" />
-    <state width="1643" height="330" key="GridCell.Tab.0.bottom" timestamp="1582803526444">
+    <state x="2170" y="455" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582814066587">
       <screen x="1440" y="90" width="1920" height="1057" />
     </state>
-    <state width="1643" height="330" key="GridCell.Tab.0.bottom/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1582803526444" />
-    <state width="1643" height="330" key="GridCell.Tab.0.center" timestamp="1582803526442">
+    <state x="2170" y="455" key="#com.intellij.fileTypes.FileTypeChooser/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1582814066587" />
+    <state x="2143" y="380" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1582817142580">
       <screen x="1440" y="90" width="1920" height="1057" />
     </state>
-    <state width="1643" height="330" key="GridCell.Tab.0.center/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1582803526442" />
-    <state width="1643" height="330" key="GridCell.Tab.0.left" timestamp="1582803526437">
+    <state x="2143" y="380" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1582817142580" />
+    <state x="2113" y="378" key="#com.intellij.refactoring.memberPullUp.PullUpDialog" timestamp="1583150648811">
       <screen x="1440" y="90" width="1920" height="1057" />
     </state>
-    <state width="1643" height="330" key="GridCell.Tab.0.left/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1582803526437" />
-    <state width="1643" height="330" key="GridCell.Tab.0.right" timestamp="1582803526443">
+    <state x="2113" y="378" key="#com.intellij.refactoring.memberPullUp.PullUpDialog/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583150648811" />
+    <state x="2117" y="252" key="#shell_[allureReport]" timestamp="1583142424672">
       <screen x="1440" y="90" width="1920" height="1057" />
     </state>
-    <state width="1643" height="330" key="GridCell.Tab.0.right/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1582803526443" />
+    <state x="2117" y="252" key="#shell_[allureReport]/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583142424672" />
+    <state x="2117" y="252" key="#shell_[downloadAllure]" timestamp="1583142407155">
+      <screen x="1440" y="90" width="1920" height="1057" />
+    </state>
+    <state x="2117" y="252" key="#shell_[downloadAllure]/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583142407155" />
+    <state width="1861" height="370" key="GridCell.Tab.0.bottom" timestamp="1583232083563">
+      <screen x="1440" y="90" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="370" key="GridCell.Tab.0.bottom/1440.67.1920.1080/0.0.1440.900@1440.67.1920.1080" timestamp="1583136669211" />
+    <state width="1861" height="370" key="GridCell.Tab.0.bottom/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583232083563" />
+    <state width="1861" height="370" key="GridCell.Tab.0.center" timestamp="1583232083562">
+      <screen x="1440" y="90" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="370" key="GridCell.Tab.0.center/1440.67.1920.1080/0.0.1440.900@1440.67.1920.1080" timestamp="1583136669205" />
+    <state width="1861" height="370" key="GridCell.Tab.0.center/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583232083562" />
+    <state width="1861" height="370" key="GridCell.Tab.0.left" timestamp="1583232083562">
+      <screen x="1440" y="90" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="370" key="GridCell.Tab.0.left/1440.67.1920.1080/0.0.1440.900@1440.67.1920.1080" timestamp="1583136669203" />
+    <state width="1861" height="370" key="GridCell.Tab.0.left/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583232083562" />
+    <state width="1861" height="370" key="GridCell.Tab.0.right" timestamp="1583232083563">
+      <screen x="1440" y="90" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="370" key="GridCell.Tab.0.right/1440.67.1920.1080/0.0.1440.900@1440.67.1920.1080" timestamp="1583136669206" />
+    <state width="1861" height="370" key="GridCell.Tab.0.right/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583232083563" />
+    <state width="1861" height="357" key="GridCell.Tab.1.bottom" timestamp="1583226242537">
+      <screen x="1440" y="90" width="1920" height="1057" />
+    </state>
+    <state width="1861" height="357" key="GridCell.Tab.1.bottom/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583226242537" />
+    <state width="1861" height="357" key="GridCell.Tab.1.center" timestamp="1583226242532">
+      <screen x="1440" y="90" width="1920" height="1057" />
+    </state>
+    <state width="1861" height="357" key="GridCell.Tab.1.center/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583226242532" />
+    <state width="1861" height="357" key="GridCell.Tab.1.left" timestamp="1583226242531">
+      <screen x="1440" y="90" width="1920" height="1057" />
+    </state>
+    <state width="1861" height="357" key="GridCell.Tab.1.left/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583226242531" />
+    <state width="1861" height="357" key="GridCell.Tab.1.right" timestamp="1583226242534">
+      <screen x="1440" y="90" width="1920" height="1057" />
+    </state>
+    <state width="1861" height="357" key="GridCell.Tab.1.right/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583226242534" />
+    <state x="1943" y="227" key="SettingsEditor" timestamp="1582816819368">
+      <screen x="1440" y="90" width="1920" height="1057" />
+    </state>
+    <state x="1943" y="227" key="SettingsEditor/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1582816819368" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -381,6 +399,21 @@
           <url>file://$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/FilterHelper.java</url>
           <line>60</line>
           <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/DeleteAndBlockUsersTests.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/DeleteAndBlockUsersTests.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/DeleteAndBlockUsersTests.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

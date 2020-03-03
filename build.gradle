@@ -22,6 +22,13 @@ gradle.projectsEvaluated {
     }
 }
 
+test {
+    useTestNG()
+    dependsOn cleanTest
+    systemProperties System.getProperties()
+    testLogging.showStandardStreams = true
+}
+
 dependencies {
     compile 'org.testng:testng:7.1.0'
     compile 'org.seleniumhq.selenium:selenium-java:3.141.59'
@@ -45,4 +52,9 @@ allure {
     autoconfigure = true
     aspectjweaver = true
     allureJavaVersion = '2.0-BETA9'
+}
+
+compileJava.options.encoding = 'UTF-8'
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }

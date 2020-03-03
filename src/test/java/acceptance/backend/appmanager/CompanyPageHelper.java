@@ -31,7 +31,7 @@ public class CompanyPageHelper extends HelperBaseAdm{
   }
 
   public void waitAndClickCompanyButton() {
-    waitLoaderAndClick(By.xpath("//a[1]"));
+    waitLoaderAndClick(By.xpath("//div[@class='row p-b-20']//a[1]"));
   }
 
   public void waitAndClickTransactionsButton() {

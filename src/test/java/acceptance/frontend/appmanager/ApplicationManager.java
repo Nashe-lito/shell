@@ -14,6 +14,9 @@ public class ApplicationManager {
   private SessionHelper sessionHelper;
   private UserHelper userHelper;
   private NavigationHelper navigationHelper;
+  private DriverHelper driverHelper;
+  private CardHelper cardHelper;
+  private DocumentHelper documentHelper;
 
   public StringBuffer verificationErrors = new StringBuffer();
   private String browser;
@@ -38,6 +41,9 @@ public class ApplicationManager {
     userHelper = new UserHelper(driver);
     navigationHelper = new NavigationHelper(driver);
     sessionHelper = new SessionHelper(driver);
+    driverHelper = new DriverHelper(driver);
+    cardHelper = new CardHelper(driver);
+    documentHelper = new DocumentHelper(driver);
     sessionHelper.login("johndou", "111");
   }
 
@@ -48,15 +54,24 @@ public class ApplicationManager {
 
 
 
-
   public UserHelper getUserHelper() {
     return userHelper;
+  }
+
+  public DriverHelper getDriverHelper() {
+    return driverHelper;
   }
 
   public NavigationHelper getNavigationHelper() {
     return navigationHelper;
   }
+  public CardHelper getCardHelper() {
+    return cardHelper;
+  }
 
+  public DocumentHelper getDocumentHelper() {
+    return documentHelper;
+  }
   public SessionHelper getSessionHelper() {
     return sessionHelper;
   }

@@ -10,13 +10,13 @@ public class TestBase {
 
   protected final ApplicationManager app = new ApplicationManager(BrowserType.CHROME);
 
-  @BeforeMethod(alwaysRun = true)
+  @BeforeClass(alwaysRun = true)
   public void setUp() throws Exception {
     app.init();
   }
 
 
-  @AfterMethod(alwaysRun = true)
+  @AfterClass(alwaysRun = true)
   public void tearDown() throws Exception {
 
 

@@ -23,7 +23,7 @@ ChromeDriver driver;
   public void testResendRegisterLinkForCompany() throws Exception {
     appManager.getNavHelper().openCompanyPageWithResendRegisterStatus();
     appManager.getCompanyPageHelper().clickSendRegisterLinkButton();
-    appManager.getCompanyPageHelper().fillEmailField(By.id("email"), "dariakhomenko@aurocraft.com");
+  //  appManager.getCompanyPageHelper().fillEmailField(By.id("email"), "dariakhomenko@aurocraft.com");
     appManager.getCompanyPageHelper().clickSendButton();
  //   assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Список компаній"));
   }

@@ -31,7 +31,7 @@ public class HelperBaseAdm {
   }
 
   protected void clearKeyAndType(By locator, String text) {
-    driver.findElement(locator).click();
+   // driver.findElement(locator).click();
     driver.findElement(locator).sendKeys(Keys.SHIFT, Keys.HOME, Keys.DELETE);
     driver.findElement(locator).sendKeys(text);
   }

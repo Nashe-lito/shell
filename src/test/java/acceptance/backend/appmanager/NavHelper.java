@@ -1,11 +1,13 @@
 package acceptance.backend.appmanager;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class NavHelper extends HelperBaseAdm{
 
 
-  public NavHelper(ChromeDriver driver) {
+  public NavHelper(WebDriver driver) {
     super(driver);
   }
 
@@ -47,5 +49,13 @@ public class NavHelper extends HelperBaseAdm{
 
   public void openUserPageWithBlockUsers() {
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/admin/clients/user/list?role=&status=blocked&company=&client1cId=&email=&fullName=");
+  }
+
+  public void openUsersOfAdminPage(){
+    driver.navigate().to("https://shell-b2b.test.aurocraft.com/admin/users/user/list");
+  }
+
+  public void clickOnPagination(){
+    click(By.xpath("//a[@class='page-link'][contains(text(),'2')]"));
   }
 }

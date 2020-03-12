@@ -1,13 +1,14 @@
 package acceptance.backend.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import java.util.Random;
 
 public class UserHelper extends HelperBaseAdm{
 
-  public UserHelper(ChromeDriver driver) {
+  public UserHelper(WebDriver driver) {
     super(driver);
   }
 

@@ -27,7 +27,7 @@ public class CardHelper extends HelperBase {
 
 
   public void clickOnSearchButton() {
-    click(By.xpath("//div[@class='c-button c-button--primary']//span[@class='c-button__label']"));
+    click(By.xpath("//form[@class='c-simple-search']//span[@class='c-button__label']"));
   }
 
   public void clickOnClearSearchButton() {

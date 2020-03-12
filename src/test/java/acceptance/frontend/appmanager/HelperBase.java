@@ -6,13 +6,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HelperBase {
   public WebDriver driver;
-  protected boolean acceptNextAlert = true;
+  public boolean acceptNextAlert = true;
 
   public HelperBase(WebDriver driver) {
     this.driver = driver;
   }
 
-  protected void type(By locator, String text) {
+  public void type(By locator, String text) {
     click(locator);
     if (text != null) {
       String existingText = driver.findElement(locator).getAttribute("value");
@@ -23,11 +23,16 @@ public class HelperBase {
     }
   }
 
-  protected void click(By locator) {
+  public void click(By locator) {
     driver.findElement(locator).click();
   }
 
-  private boolean isAlertPresent() {
+  public void scrollDown(String parameter) throws InterruptedException {
+    JavascriptExecutor jse = (JavascriptExecutor)driver;
+    jse.executeScript(parameter);
+  }
+
+  public boolean isAlertPresent() {
     try {
       driver.switchTo().alert();
       return true;

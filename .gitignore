@@ -15,3 +15,12 @@ gradle-app.setting
 .idea/misc.xml
 .DS_Store
 *.json
+*.log
+src/test/java/api/appmanager/ApplicationManagerApi.java
+src/test/java/api/appmanager/HttpSession.java
+src/test/java/api/CreateNewUserOfCompanyTests.java
+src/test/java/api/tests/LoginTests.java
+src/test/java/api/tests/TestBaseApi.java
+src/test/java/api/ClientAuthTests.java
+src/test/java/api/tests/LoginTests.java
+src/test/java/api/tests/TestBaseApi.java

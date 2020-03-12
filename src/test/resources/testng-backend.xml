@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+    <test name="UsersOfAdmin" >
+        <classes>
+            <class name="acceptance.backend.tests.UsersOfAdminCreateTests" />
+            <class name="acceptance.backend.tests.UsersOfAdminModifyTests" />
+            <class name="acceptance.backend.tests.UsersOfAdminDeleteTests" />
+        </classes>
+    </test>
+
+    <test name="UsersCompany">
+        <classes>
+            <class name="acceptance.backend.tests.UsersCompanyTests"/>
+        </classes>
+    </test>
+
+    <test name="Filters">
+        <classes>
+            <class name="acceptance.backend.tests.FiltersTests"/>
+        </classes>
+    </test>
+
+    <test name="Cards">
+        <classes>
+            <class name="acceptance.backend.tests.CardTests"/>
+        </classes>
+    </test>
+
+    <test name="Company">
+        <classes>
+            <class name="acceptance.backend.tests.CompanyTests"/>
+        </classes>
+    </test>
+</suite>

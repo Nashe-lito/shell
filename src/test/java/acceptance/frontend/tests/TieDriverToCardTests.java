@@ -1,4 +1,4 @@
-package acceptance.frontend.cards.tests;
+package acceptance.frontend.tests;
 
 import acceptance.frontend.base.TestBase;
 import org.testng.annotations.Test;

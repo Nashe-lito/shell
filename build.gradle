@@ -7,10 +7,8 @@ buildscript {
     }
 }
 
-
 apply plugin: 'java'
 apply plugin: 'io.qameta.allure'
-
 
 repositories {
     mavenCentral()
@@ -37,15 +35,16 @@ dependencies {
     implementation 'com.thoughtworks.xstream:xstream:1.4.11.1'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'ch.qos.logback:logback-classic:1.3.0-alpha4'
-
+    implementation 'com.beust:jcommander:1.78'
     compileOnly 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
-
     compile 'io.rest-assured:spring-web-test-client:4.2.0'
-
     implementation 'io.qameta.allure:allure-testng:2.13.2'
+    implementation 'com.thoughtworks.xstream:xstream:1.4.11.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+    implementation 'mysql:mysql-connector-java:8.0.19'
 }
-
 
 allure {
     version = '2.2.1'
@@ -57,4 +56,34 @@ allure {
 compileJava.options.encoding = 'UTF-8'
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
+}
+
+task testFrontend(type: Test) {
+    useTestNG {
+        suites 'src/test/resources/testng-frontend.xml'
+    }
+    if(project.hasProperty('browser')){
+        systemProperty 'browser', "${browser}"
+    }
+    if(project.hasProperty('target')){
+        systemProperty 'target', "${target}"
+    }
+    if(project.hasProperty('verifyUI')){
+        systemProperty 'verifyUI', "${verifyUI}"
+    }
+}
+
+task testBackend(type: Test){
+    useTestNG{
+        suites 'src/test/resources/testng-backend.xml'
+    }
+    if(project.hasProperty('browser')){
+        systemProperty 'browser', "${browser}"
+    }
+    if(project.hasProperty('target')){
+        systemProperty 'target', "${target}"
+    }
+    if(project.hasProperty('verifyUI')){
+        systemProperty 'verifyUI', "${verifyUI}"
+    }
 }

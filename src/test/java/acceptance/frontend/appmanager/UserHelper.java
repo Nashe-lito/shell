@@ -1,5 +1,6 @@
 package acceptance.frontend.appmanager;
 
+import acceptance.frontend.model.DriverData;
 import acceptance.frontend.model.UserData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class UserHelper extends HelperBase {
@@ -20,22 +23,22 @@ public class UserHelper extends HelperBase {
     driver.navigate().refresh();
   }
 
-  public void fillUserForm(UserData userData) {
-    type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div/div[1]/div/div[1]/div[1]/label/input"), userData.getCreateName());
-    type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div/div[1]/div/div[1]/div[2]/label/input"), userData.getCreateSurname());
+  public void fillUserForm(UserData user) {
+    type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div/div[1]/div/div[1]/div[1]/label/input"), user.getCreateName());
+    type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div/div[1]/div/div[1]/div[2]/label/input"), user.getCreateSurname());
 
-    select(By.xpath("//div[@id='root']/div/div[3]/div/div/div[2]/div[2]/div/div/div/div/div[2]/div[2]/label/span[2]/select"), userData.getCreateRole());
+    select(By.xpath("//div[@id='root']/div/div[3]/div/div/div[2]/div[2]/div/div/div/div/div[2]/div[2]/label/span[2]/select"), user.getCreateRole());
 
-    String email = "test@test.test" + new Random().nextInt(10000);
-    type(By.xpath("//input[@type='email']"), email);
+  //  String email = "test@test.test" + new Random().nextInt(10000);
+    type(By.xpath("//input[@type='email']"), user.getCreateEmail() + new Random().nextInt(10000));
 
-    type(By.xpath("//input[@type='tel']"), userData.getCreateTel());
+    type(By.xpath("//input[@type='tel']"), user.getCreateTel());
 
-    String username = "test" + new Random().nextInt(10000);
-    type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div/div[1]/div/div[4]/div[1]/label/input"), username);
+  //  String username = "test" + new Random().nextInt(10000);
+    type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div/div[1]/div/div[4]/div[1]/label/input"), user.getCreateUsername() + new Random().nextInt(10000));
 
-    type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div/div[1]/div/div[5]/div[1]/label/div/input"), userData.getCreatePassword());
-    type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div/div[1]/div/div[5]/div[2]/label/div/input"), userData.getCreatePassword());
+    type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div/div[1]/div/div[5]/div[1]/label/div/input"), user.getCreatePassword());
+    type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div/div[1]/div/div[5]/div[2]/label/div/input"), user.getCreatePassword());
   }
 
   private void select(By locator, String role) {
@@ -60,14 +63,9 @@ public class UserHelper extends HelperBase {
     click(By.xpath("//span/div/div[2]/div/div[2]/p"));
   }
 
-  public void openPopoverOnUsersPage() {
-    Actions builder = new Actions(driver);
-    WebElement element = driver.findElement(By.xpath("//div[@class='c-table c-table--with-more']//div[2]//div[6]//span[1]//div[1]//div[1]//span[1]"));
-    builder.moveToElement(element).build().perform();
-  }
-
-  public void goToActiveUsersPage() {
-    click(By.xpath("//div[@class='c-tabs c-tabs--full']//div[2]"));
+  public void openPopoverOnUsersPage(int index) throws InterruptedException {
+    scrollDown("scroll(0,  1400)");
+    driver.findElements(By.xpath("//span[@class='c-icon c-icon--more']")).get(index).click();
   }
 
   public void clickOnLockUserButton() {
@@ -129,9 +127,11 @@ public class UserHelper extends HelperBase {
     click(By.xpath("//div[@class='c-button c-button--primary']"));
   }
 
-  public void createUser(String createName, String createSurname, String createRole, String createTel, String createPassword) {
+  public void createUser(UserData user) throws InterruptedException{
+  //String createName, String createSurname, String createRole, String createTel, String createPassword) {
     goToCreateUserPage();
-    fillUserForm(new UserData("Name", "Surname", "accountant", "+380987165311", "12345678"));
+    fillUserForm(user);
+            //new UserData("Name", "Surname", "accountant", "test@test.test", "+380987165311", "test","12345678"));
     submitFormButton();
   }
 
@@ -139,10 +139,23 @@ public class UserHelper extends HelperBase {
     return isElementPresent(By.xpath("//div[@id='root']/div/div[3]/div/div/div[2]/div[2]/div[2]/div[6]/span/div/div/span"));
   }
 
-  public void lockUser() {
-    openPopoverOnUsersPage();
+  public void lockUser() throws InterruptedException {
+    scrollDown("scroll(0,  1400)");
+    openPopoverOnUsersPage(0);
     clickOnLockLinkOnUsersPage();
     confirmAction();
     clickOK();
+  }
+
+  public List<UserData> getUserList() {
+   List<UserData> users = new ArrayList<UserData>();
+   List<WebElement> elements = driver.findElements(By.cssSelector("span.c-tooltip"));
+   for (WebElement element : elements){
+     String surname = element.getTagName();
+     UserData user = new UserData(null, surname, null, null, null, null, null);
+     users.add(user);
+
+   }
+   return users;
   }
 }

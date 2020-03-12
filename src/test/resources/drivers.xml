@@ -1,0 +1,22 @@
+<list>
+  <acceptance.frontend.model.DriverData>
+    <surname>Surname</surname>
+    <name>Name</name>
+    <middlename>Middlename</middlename>
+    <email>test@test.test0</email>
+    <status>active</status>
+    <tel>+380987165390</tel>
+    <carNum>AA1234BB0</carNum>
+    <note>Ea eoss0</note>
+  </acceptance.frontend.model.DriverData>
+  <acceptance.frontend.model.DriverData>
+    <surname>Surname</surname>
+    <name>Name</name>
+    <middlename>Middlename</middlename>
+    <email>test@test.test1</email>
+    <status>active</status>
+    <tel>+380987165391</tel>
+    <carNum>AA1234BB1</carNum>
+    <note>Ea eoss1</note>
+  </acceptance.frontend.model.DriverData>
+</list>

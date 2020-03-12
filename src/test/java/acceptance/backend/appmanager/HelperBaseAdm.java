@@ -1,42 +1,53 @@
 package acceptance.backend.appmanager;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+
 public class HelperBaseAdm {
-  ChromeDriver driver;
+  public WebDriver driver;
+  public boolean acceptNextAlert = true;
 
-  protected boolean acceptNextAlert = true;
-
-  public HelperBaseAdm(ChromeDriver driver) {
+  public HelperBaseAdm(WebDriver driver) {
     this.driver = driver;
   }
 
-  protected void click(By locator) {
+  public void click(By locator) {
     driver.findElement(locator).click();
   }
 
-  protected void select(String registerStatus, By locator) {
+  public void select(String registerStatus, By locator) {
     click(locator);
     new Select(driver.findElement(locator)).selectByValue(registerStatus);
   }
 
-  protected void type(By locator, String text) {
-    driver.findElement(locator).click();
-    driver.findElement(locator).clear();
-    driver.findElement(locator).sendKeys(text);
+
+  public void type(By locator, String text) {
+    click(locator);
+    if (text != null) {
+      String existingText = driver.findElement(locator).getAttribute("value");
+      if (!text.equals(existingText)) {
+        driver.findElement(locator).clear();
+        driver.findElement(locator).sendKeys(text);
+      }
+    }
   }
 
-  protected void clearKeyAndType(By locator, String text) {
-   // driver.findElement(locator).click();
-    driver.findElement(locator).sendKeys(Keys.SHIFT, Keys.HOME, Keys.DELETE);
-    driver.findElement(locator).sendKeys(text);
+  public void clearKeyAndType(By locator, String text) {
+    click(locator);
+    if (text != null) {
+      String existingText = driver.findElement(locator).getAttribute("value");
+      if (!text.equals(existingText)) {
+        driver.findElement(locator).sendKeys(Keys.SHIFT, Keys.HOME, Keys.DELETE);
+        driver.findElement(locator).sendKeys(text);
+      }
+    }
   }
 
-  protected void waitLoaderAndClick(By locator) {
+  public void waitLoaderAndClick(By locator) {
     WebDriverWait wait = new WebDriverWait(driver, 5);
     boolean invisible = wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("preloader")));
     if (invisible) {
@@ -44,7 +55,18 @@ public class HelperBaseAdm {
     }
   }
 
-  private boolean isElementPresent(By by) {
+  public void attach(By locator, File file) {
+
+    driver.findElement(locator).sendKeys(file.getAbsolutePath());
+  }
+
+  public void scrollDown(String parameter) throws InterruptedException {
+    JavascriptExecutor jse = (JavascriptExecutor) driver;
+    jse.executeScript(parameter);
+    Thread.sleep(3000);
+  }
+
+  public boolean isElementPresent(By by) {
     try {
       driver.findElement(by);
       return true;
@@ -53,7 +75,7 @@ public class HelperBaseAdm {
     }
   }
 
-  private boolean isAlertPresent() {
+  public boolean isAlertPresent() {
     try {
       driver.switchTo().alert();
       return true;
@@ -62,7 +84,7 @@ public class HelperBaseAdm {
     }
   }
 
-  private String closeAlertAndGetItsText() {
+  public String closeAlertAndGetItsText() {
     try {
       Alert alert = driver.switchTo().alert();
       String alertText = alert.getText();

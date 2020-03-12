@@ -21,7 +21,7 @@ public class AuthTests {
   }
 
 
-  @Test
+  @Test(enabled = false)
   public void testAuth() throws Exception {
     driver.get("https://shell-b2b.test.aurocraft.com/uk/auth");
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

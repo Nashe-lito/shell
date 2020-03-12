@@ -12,7 +12,7 @@ public class FilterHelper extends HelperBaseAdm {
   public StringBuffer verificationErrors = new StringBuffer();
   private boolean acceptNextAlert = true;
 
-  public FilterHelper(ChromeDriver driver) {
+  public FilterHelper(WebDriver driver) {
     super(driver);
   }
 

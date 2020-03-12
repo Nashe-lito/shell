@@ -30,6 +30,10 @@ public class NavigationHelper extends HelperBase{
     click(By.xpath("//div[@class='c-company-grid']//div[2]//div[2]//a[1]//span[1]"));
   }
 
+  public void openDriversPage() {
+    driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/drivers");
+  }
+
   public void openActiveDriversPage(){
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/drivers?status=active");
   }

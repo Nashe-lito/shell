@@ -1,0 +1,20 @@
+<list>
+  <acceptance.frontend.model.UserData>
+    <createName>Surname</createName>
+    <createSurname>Name</createSurname>
+    <createRole>accountant</createRole>
+    <createEmail>test@test.test1080</createEmail>
+    <createTel>+380987165310</createTel>
+    <createUsername>test2370</createUsername>
+    <createPassword>123456780</createPassword>
+  </acceptance.frontend.model.UserData>
+  <acceptance.frontend.model.UserData>
+    <createName>Surname</createName>
+    <createSurname>Name</createSurname>
+    <createRole>accountant</createRole>
+    <createEmail>test@test.test66061</createEmail>
+    <createTel>+380987165311</createTel>
+    <createUsername>test3161</createUsername>
+    <createPassword>123456781</createPassword>
+  </acceptance.frontend.model.UserData>
+</list>

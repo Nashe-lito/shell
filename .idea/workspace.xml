@@ -2,72 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aaa3d8ee-0ff4-46e9-bf31-477a5eadbec4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beust_jcommander_1_78.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__mysql_mysql_connector_java_8_0_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/UsersOfAdminHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/model/UsersOfAdminData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/UsersOfAdminCreateTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/UsersOfAdminDeleteTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/UsersOfAdminModifyTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/generators/DriverDataGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/generators/UserDataGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/model/DriverData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/DbConnectionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/DriversCreateTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/DriversModificationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/appmanager/ApplicationManagerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/appmanager/HttpSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/tests/LoginTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/tests/TestBaseApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/0a3147406c77ad2aa275d483ec4a4b961b934665_1581947992.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/drivers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testng-backend.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testng-frontend.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/users.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beust_jcommander_1_72.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/shell.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/shell.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/shell.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/shell.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/AppManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/AppManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/CompanyPageHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/CompanyPageHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/FilterHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/FilterHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/HelperBaseAdm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/HelperBaseAdm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/NavHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/NavHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/SessHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/SessHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/UserHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/UserHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/TestBaseAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/TestBaseAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/UsersCompanyTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/UsersCompanyTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/AuthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/AuthTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/CardHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/CardHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/DriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/DriverHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/HelperBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/NavigationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/NavigationHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/UserHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/UserHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/base/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/cards/tests/CreateApplyForNewCardsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/CreateApplyForNewCardsTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/cards/tests/SearchCardTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/SearchCardTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/cards/tests/TieDriverToCardTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/TieDriverToCardTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/CreateDriversTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/CreateUsersTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/UsersCreateTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/DeleteAndBlockDriversTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/DriversDeleteAndBlockTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/DeleteAndBlockUsersTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/UsersDeleteAndBlockTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/ModificationDriversTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/company/tests/ModificationUsersTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/UsersModificationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/documents/tests/DocumentTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/DocumentTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/model/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/model/UserData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/api/ClientAuthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/ClientAuthTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/api/CreateNewUserOfCompanyTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/CreateNewUserOfCompanyTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/data/0a3147406c77ad2aa275d483ec4a4b961b934665_1581947992.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -411,24 +350,28 @@
       <screen x="1440" y="90" width="1920" height="1057" />
     </state>
     <state x="2117" y="252" key="#shell_[downloadAllure]/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583142407155" />
-    <state width="1878" height="370" key="GridCell.Tab.0.bottom" timestamp="1584028001570">
-      <screen x="1440" y="90" width="1920" height="1057" />
+    <state width="1398" height="370" key="GridCell.Tab.0.bottom" timestamp="1584104513121">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1398" height="370" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1584104513121" />
     <state width="1878" height="370" key="GridCell.Tab.0.bottom/1440.67.1920.1080/0.0.1440.900@1440.67.1920.1080" timestamp="1583136669211" />
     <state width="1878" height="370" key="GridCell.Tab.0.bottom/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1584028001570" />
-    <state width="1878" height="370" key="GridCell.Tab.0.center" timestamp="1584028001569">
-      <screen x="1440" y="90" width="1920" height="1057" />
+    <state width="1398" height="370" key="GridCell.Tab.0.center" timestamp="1584104513118">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1398" height="370" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1584104513118" />
     <state width="1878" height="370" key="GridCell.Tab.0.center/1440.67.1920.1080/0.0.1440.900@1440.67.1920.1080" timestamp="1583136669205" />
     <state width="1878" height="370" key="GridCell.Tab.0.center/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1584028001569" />
-    <state width="1878" height="370" key="GridCell.Tab.0.left" timestamp="1584028001568">
-      <screen x="1440" y="90" width="1920" height="1057" />
+    <state width="1398" height="370" key="GridCell.Tab.0.left" timestamp="1584104513116">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1398" height="370" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1584104513116" />
     <state width="1878" height="370" key="GridCell.Tab.0.left/1440.67.1920.1080/0.0.1440.900@1440.67.1920.1080" timestamp="1583136669203" />
     <state width="1878" height="370" key="GridCell.Tab.0.left/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1584028001568" />
-    <state width="1878" height="370" key="GridCell.Tab.0.right" timestamp="1584028001569">
-      <screen x="1440" y="90" width="1920" height="1057" />
+    <state width="1398" height="370" key="GridCell.Tab.0.right" timestamp="1584104513118">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1398" height="370" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1584104513118" />
     <state width="1878" height="370" key="GridCell.Tab.0.right/1440.67.1920.1080/0.0.1440.900@1440.67.1920.1080" timestamp="1583136669206" />
     <state width="1878" height="370" key="GridCell.Tab.0.right/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1584028001569" />
     <state width="1878" height="357" key="GridCell.Tab.1.bottom" timestamp="1584025378526">
@@ -451,9 +394,10 @@
       <screen x="1440" y="90" width="1920" height="1057" />
     </state>
     <state x="2153" y="265" width="516" height="706" key="RefactorJ.IntroduceParameterObject/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583420962132" />
-    <state x="1943" y="227" key="SettingsEditor" timestamp="1582816819368">
-      <screen x="1440" y="90" width="1920" height="1057" />
+    <state x="377" y="63" key="SettingsEditor" timestamp="1584111101569">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state x="377" y="63" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1584111101569" />
     <state x="1943" y="227" key="SettingsEditor/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1582816819368" />
     <state x="2205" y="403" key="chooseDestDirectoryDialog" timestamp="1583851649676">
       <screen x="1440" y="90" width="1920" height="1057" />

@@ -86,6 +86,7 @@ public class UsersDeleteAndBlockTests extends TestBase {
     app.getUserHelper().clickOnUnlockUserButton();
     app.getUserHelper().confirmAction();
     app.getUserHelper().clickOK();
+    app.getNavigationHelper().openBlockedUsersPage();
     List<UserData> after = app.getUserHelper().getUserList();
     Assert.assertEquals(after.size(), before.size() - 1);
   }

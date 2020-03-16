@@ -44,7 +44,7 @@ public class UsersCreateTests extends TestBase {
     if (app.getNavigationHelper().isElementPresent(By.xpath("//*[@id=\"overlay-root\"]/div/div[4]/div/div/div[2]/div/div"))) {
       app.getUserHelper().clickOK();
     }
-    //  app.getUserHelper().getUsersPageAndRefresh();
+     app.getUserHelper().getUsersPageAndRefresh();
     List<UserData> after = app.getUserHelper().getUserList();
     Assert.assertEquals(after.size(),before.size() +1);
   }

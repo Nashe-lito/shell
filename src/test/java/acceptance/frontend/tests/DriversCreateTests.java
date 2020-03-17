@@ -66,7 +66,7 @@ public class DriversCreateTests extends TestBase {
     }
   }
 
-  @Test(dataProvider = "validDriversFromJson")
+  @Test(dataProvider = "validDriversFromXml")
   public void testCreateDriver(DriverData driver) throws Exception {
 
     //String surname, String name, String middlename, String email, String status, String tel, String tel2,String carNum, String note) throws Exception {

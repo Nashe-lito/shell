@@ -6,6 +6,8 @@ import org.testng.annotations.*;
 
 import org.openqa.selenium.*;
 
+import java.util.Random;
+
 public class CompanyTests extends TestBaseAdmin {
 
 ChromeDriver driver;
@@ -14,7 +16,7 @@ ChromeDriver driver;
   public void testSendRegisterLinkForCompany() throws Exception {
     appManager.getNavHelper().openCompanyPageWithNotRegisterStatus();
     appManager.getCompanyPageHelper().clickSendRegisterLinkButton();
-    appManager.getCompanyPageHelper().fillEmailField(By.id("email"), "dariakhomenko@aurocraft.com");
+    appManager.getCompanyPageHelper().fillEmailField(By.id("email"), "dariakhomenko@aurocraft.com"+ new Random().nextInt(10000));
     appManager.getCompanyPageHelper().clickSendButton();
     //   assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Список компаній"));
   }
@@ -81,7 +83,7 @@ ChromeDriver driver;
   public void testModifyCompanyProfile() throws Exception {
     appManager.getNavHelper().openCompanyProfilePage();
 
-    appManager.getCompanyPageHelper().fillCompanyProfileFields("ModNamOfCompany", "test@test.test", "04212 - Малиновского ул. Н(1-15), Ч(2-10)", "+380987165311");
+    appManager.getCompanyPageHelper().fillCompanyProfileFields("ModNamOfCompany", "test@test.test" + new Random().nextInt(10000), "04212 - Малиновского ул. Н(1-15), Ч(2-10)", "+380987165311");
     appManager.getCompanyPageHelper().clickSubmitAndRedirectButton();
 //    assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Список компаній"));
 

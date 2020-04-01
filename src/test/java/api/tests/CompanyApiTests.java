@@ -96,10 +96,9 @@ public class CompanyApiTests {
   Object[][] getPositiveData(){
     String CompanyProfileData[][]= {{"E", "test@example.com" + new Random()
             .nextInt(1000), "+380987165319", "T"},
-            {"E", "", "", ""},
             {"qwertyuioasdfghjklzxcvbnm !#$%&'*+-/=?^_`{|}~@aurocraft.com QWERTYUIOP ASDFGHJKL ZXCVBNM. 1234567890 йцукенгшщзфывапролдячсмитьб, ЙЦУКЕНГШЩЗ ФЫВАПРОЛД ЯЧСМИТЬБЮ ЇЄ. Lorem ipsum dolor sit amet, qwertyu", "em2!#$%&'*+-/=?^_`{|}~ail@google.com" + new Random()
-                    .nextInt(1000), "", "qwertyuioasdfghjklzxcvbnm !#$%&'*+-/=?^_`{|}~@aurocraft.com QWERTYUIOP ASDFGHJKL ZXCVBNM. 1234567890 йцукенгшщзфывапролдячсмитьб, ЙЦУКЕНГШЩЗ ФЫВАПРОЛД ЯЧСМИТЬБЮ ЇЄ. Lorem ipsum dolor sit amet, qwertyuioasdfghjklzxcvbnm !#$%&'*+-/=?^_`{|}~@aurocrafddd"}
-
+                    .nextInt(1000), "", "qwertyuioasdfghjklzxcvbnm !#$%&'*+-/=?^_`{|}~@aurocraft.com QWERTYUIOP ASDFGHJKL ZXCVBNM. 1234567890 йцукенгшщзфывапролдячсмитьб, ЙЦУКЕНГШЩЗ ФЫВАПРОЛД ЯЧСМИТЬБЮ ЇЄ. Lorem ipsum dolor sit amet, qwertyuioasdfghjklzxcvbnm !#$%&'*+-/=?^_`{|}~@aurocrafddd"},
+            {"E", "", "", ""},
     };
     return (CompanyProfileData);
   }

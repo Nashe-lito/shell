@@ -2,7 +2,6 @@ package acceptance.backend.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class NavHelper extends HelperBaseAdm{
 
@@ -28,7 +27,7 @@ public class NavHelper extends HelperBaseAdm{
   }
 
   public void openCompanyPageWithNotRegisterStatus() {
-    driver.navigate().to("https://shell-b2b.test.aurocraft.com/admin/clients/client/list?clientId=&clientName=&cardNumber=&managerId=&type=&status=&registerStatus=not-registered");
+    driver.navigate().to("https://shell-b2b.test.aurocraft.com/admin/clients/client/list?clientId=&clientName=&cardNumber=&managerId=%D0%9A%D0%92%D0%A60000161&type=&status=&registerStatus=not-registered");
   }
 
   public void openCompanyPageWithResendRegisterStatus() {

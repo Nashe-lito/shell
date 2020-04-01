@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class UsersDeleteAndBlockTests extends TestBase {
 
-  @Test(priority = 1)
+  @Test
   public void testBlockUserThroughTable() throws Exception {
     app.getNavigationHelper().openActiveUsersPage();
     if (!app.getUserHelper().isThereAUser()) {
@@ -29,7 +29,7 @@ public class UsersDeleteAndBlockTests extends TestBase {
   }
 
 
-  @Test(priority = 2)
+  @Test
   public void testBlockUserFromModifyPage() throws Exception {
     app.getNavigationHelper().openActiveUsersPage();
     if (!app.getUserHelper().isThereAUser()) {
@@ -49,7 +49,7 @@ public class UsersDeleteAndBlockTests extends TestBase {
     Assert.assertEquals(after.size(), before.size() - 1);
   }
 
-  @Test(priority = 3)
+  @Test
   public void testUnblockedUserThroughTable() throws Exception {
     app.getNavigationHelper().openBlockedUsersPage();
     if (!app.getUserHelper().isThereAUser()) {
@@ -69,7 +69,7 @@ public class UsersDeleteAndBlockTests extends TestBase {
     Assert.assertEquals(after.size(), before.size() - 1);
   }
 
-  @Test(priority = 4)
+  @Test
   public void testUnblockUserFromModifyPage() throws Exception {
     app.getNavigationHelper().openBlockedUsersPage();
     if (!app.getUserHelper().isThereAUser()) {
@@ -91,7 +91,7 @@ public class UsersDeleteAndBlockTests extends TestBase {
     Assert.assertEquals(after.size(), before.size() - 1);
   }
 
-  @Test(priority = 5)
+  @Test
   public void testDeleteUserThroughTable() throws Exception {
     app.getNavigationHelper().goToUsersPage();
     if (!app.getUserHelper().isThereAUser()) {
@@ -108,7 +108,8 @@ public class UsersDeleteAndBlockTests extends TestBase {
     Assert.assertEquals(after.size(), before.size() - 1);
   }
 
-  @Test(priority = 6)
+
+  @Test
   public void testDeleteUserFromModifyPage() throws Exception {
     app.getNavigationHelper().goToUsersPage();
     if (!app.getUserHelper().isThereAUser()) {

@@ -47,9 +47,9 @@ public class HelperBaseAdm {
     }
   }
 
-  public void waitLoaderAndClick(By locator) {
+  public void waitLoaderAndClick(By locator, By preloader) {
     WebDriverWait wait = new WebDriverWait(driver, 7);
-    boolean invisible = wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("preloader")));
+    boolean invisible = wait.until(ExpectedConditions.invisibilityOfElementLocated(preloader));
     if (invisible) {
       click(locator);
     }

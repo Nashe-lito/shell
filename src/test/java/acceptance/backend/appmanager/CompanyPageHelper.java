@@ -1,9 +1,7 @@
 package acceptance.backend.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -16,7 +14,14 @@ public class CompanyPageHelper extends HelperBaseAdm{
   }
 
   public void clickSendRegisterLinkButton() {
-    waitLoaderAndClick(By.xpath("//tr[1]//td[8]//button[1]"));
+    waitLoaderAndClick(By.xpath("//tr[1]//td[8]//button[1]"), By.id("preloader"));
+  }
+
+ /* public void closeToastContainer() {
+    waitLoaderAndClick(By.xpath("//div[@id='toast-container']/div/div"), By.xpath("//div[@id='toast-container']/div/div"));
+  }*/
+  public void closeToastContainer() {
+    click(By.cssSelector("div.toast-message"));
   }
 
   public void clickSendButton() {
@@ -28,31 +33,31 @@ public class CompanyPageHelper extends HelperBaseAdm{
   }
 
   public void waitAndClickCardButton() {
-    waitLoaderAndClick(By.xpath("//tr[1]//td[10]//a[1]"));
+    waitLoaderAndClick(By.xpath("//tr[1]//td[10]//a[1]"), By.id("preloader"));
   }
 
   public void waitAndClickCompanyButton() {
-    waitLoaderAndClick(By.xpath("//div[@class='row p-b-20']//a[1]"));
+    waitLoaderAndClick(By.xpath("//div[@class='row p-b-20']//a[1]"), By.id("preloader"));
   }
 
   public void waitAndClickTransactionsButton() {
-    waitLoaderAndClick(By.xpath("//tr[1]//td[10]//a[3]"));
+    waitLoaderAndClick(By.xpath("//tr[1]//td[10]//a[3]"), By.id("preloader"));
   }
 
   public void waitAndClickTransactionsButtonFromCompanyProfile() {
-    waitLoaderAndClick(By.xpath("//a[2]"));
+    waitLoaderAndClick(By.xpath("//a[2]"), By.id("preloader"));
   }
 
   public void waitAndClickUsersButton() {
-    waitLoaderAndClick(By.xpath("//tr[1]//td[10]//a[4]"));
+    waitLoaderAndClick(By.xpath("//tr[1]//td[10]//a[4]"), By.id("preloader"));
   }
 
   public void waitAndClickUsersButtonFromCompanyPage() {
-    waitLoaderAndClick(By.xpath("//a[3]"));
+    waitLoaderAndClick(By.xpath("//a[3]"), By.id("preloader"));
   }
 
   public void waitAndClickCompanyProfilePageButton() {
-    waitLoaderAndClick(By.xpath("//tr[1]//td[10]//a[2]"));
+    waitLoaderAndClick(By.xpath("//tr[1]//td[10]//a[2]"), By.id("preloader"));
   }
 
   public void clickSubmitAndRedirectButton() {

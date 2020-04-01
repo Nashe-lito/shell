@@ -2,7 +2,6 @@ package acceptance.backend.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import java.util.Random;
 
@@ -33,7 +32,7 @@ public class UserHelper extends HelperBaseAdm{
   }
 
   public void waitAndClickEditUserButton() {
-    waitLoaderAndClick(By.xpath("//tr[1]/td[9]/div/a"));
+    waitLoaderAndClick(By.xpath("//tr[1]/td[9]/div/a"), By.id("preloader"));
   }
 
   public void clickDeleteConfigButton() {
@@ -41,7 +40,7 @@ public class UserHelper extends HelperBaseAdm{
   }
 
   public void waitAndClickDeleteButton() {
-    waitLoaderAndClick(By.xpath("//tr[2]//td[9]//div[1]//button[1]"));
+    waitLoaderAndClick(By.xpath("//tr[2]//td[9]//div[1]//button[1]"), By.id("preloader"));
   }
 
   public void clickSuccessChangeStatusButton() {
@@ -53,6 +52,6 @@ public class UserHelper extends HelperBaseAdm{
   }
 
   public void clickSendRestorePassLinkButton() {
-    waitLoaderAndClick(By.xpath("//button[@class='btn btn-xs btn-success send-restore-pass-link']"));
+    waitLoaderAndClick(By.xpath("//button[@class='btn btn-xs btn-success send-restore-pass-link']"), By.id("preloader"));
   }
 }

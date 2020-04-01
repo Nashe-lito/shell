@@ -2,10 +2,7 @@ package acceptance.backend.appmanager;
 
 import acceptance.backend.model.FiltersData;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FilterHelper extends HelperBaseAdm {
 
@@ -50,7 +47,7 @@ public class FilterHelper extends HelperBaseAdm {
   }
 
   public void waitAndClickFilterContainer() {
-    waitLoaderAndClick(By.xpath("//div[@class='panel-heading']//span[@data-perform='panel-collapse']"));
+    waitLoaderAndClick(By.xpath("//div[@class='panel-heading']//span[@data-perform='panel-collapse']"), By.id("preloader"));
   }
 
   public void fillFieldFullName(String fullName) {

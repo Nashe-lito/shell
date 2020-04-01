@@ -1,14 +1,15 @@
-package api;
+package api.tests;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 public class ClientAuthTests {
 
-  @Test(enabled = false)
+  @Test//(enabled = false)
   public void testSendPostWithActualDataReturn200(){
-    RestAssured.given()
+    Response resp =  RestAssured.given()
             .baseUri("https://shell-b2b.test.aurocraft.com/api")
             .basePath("/v1/oauth")
             .contentType(ContentType.JSON)
@@ -18,12 +19,15 @@ public class ClientAuthTests {
                     "}")
             .when().post()
             .then()
-            .statusCode(200);
+            .statusCode(200)
+            .extract()
+            .response();
+    resp.getBody().print();
   }
 
-  @Test (enabled = false)
+  @Test //(enabled = false)
   public void testAuthorizationAsARegisteredUserWithOutPasswordReturn400(){
-    RestAssured.given()
+    Response resp = RestAssured.given()
             .baseUri("https://shell-b2b.test.aurocraft.com/api")
             .basePath("/v1/oauth")
             .contentType(ContentType.JSON)
@@ -33,10 +37,13 @@ public class ClientAuthTests {
                     "}")
             .when().post()
             .then()
-            .statusCode(400);
+            .statusCode(400)
+            .extract()
+            .response();
+    resp.getBody().print();
   }
 
-@Test(enabled = false)
+@Test //(enabled = false)
   public void testAuthorizationAsARegisteredUserWithNullInPassworddReturn400(){
   RestAssured.given()
           .baseUri("https://shell-b2b.test.aurocraft.com/api")
@@ -51,7 +58,7 @@ public class ClientAuthTests {
           .statusCode(400);
 }
 
-@Test(enabled = false)
+@Test //(enabled = false)
   public void testSendGetReturn405(){
   RestAssured.given()
           .baseUri("https://shell-b2b.test.aurocraft.com/api")
@@ -65,7 +72,7 @@ public class ClientAuthTests {
           .then()
           .statusCode(405);
 }
-  @Test(enabled = false)
+  @Test //(enabled = false)
   public void testSendPutReturn405(){
     RestAssured.given()
             .baseUri("https://shell-b2b.test.aurocraft.com/api")
@@ -79,7 +86,7 @@ public class ClientAuthTests {
             .then()
             .statusCode(405);
   }
-  @Test(enabled = false)
+  @Test //(enabled = false)
   public void testSendDeleteReturn405(){
     RestAssured.given()
             .baseUri("https://shell-b2b.test.aurocraft.com/api")
@@ -94,7 +101,7 @@ public class ClientAuthTests {
             .statusCode(405);
   }
 
-  @Test(enabled = false)
+  @Test //(enabled = false)
   public void testAuthorizationWithIncorrectPasswordReturn400() {
     RestAssured.given()
             .baseUri("https://shell-b2b.test.aurocraft.com/api")
@@ -109,7 +116,7 @@ public class ClientAuthTests {
             .statusCode(400);
   }
 
-  @Test(enabled = false)
+  @Test //(enabled = false)
   public void testAuthorizationWithIncorrectLoginReturn400(){
     RestAssured.given()
             .baseUri("https://shell-b2b.test.aurocraft.com/api")
@@ -124,7 +131,7 @@ public class ClientAuthTests {
             .statusCode(400);
   }
 
-  @Test(enabled = false)
+  @Test //(enabled = false)
   public void testAuthorizationWithSQLInjectionReturn400(){
     RestAssured.given()
             .baseUri("https://shell-b2b.test.aurocraft.com/api")
@@ -139,7 +146,7 @@ public class ClientAuthTests {
             .statusCode(400);
   }
 
-  @Test(enabled = false)
+  @Test //(enabled = false)
   public void testAuthorizationWithSQLInjectionDropTableReturn400(){
     RestAssured.given()
             .baseUri("https://shell-b2b.test.aurocraft.com/api")
@@ -153,6 +160,7 @@ public class ClientAuthTests {
             .then()
             .statusCode(400);
   }
+
 /*  public function testSendPostSpecialCharactersReturn200(ApiTester $I)
   {
     $data = [

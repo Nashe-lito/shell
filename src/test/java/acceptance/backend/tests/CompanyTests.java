@@ -1,10 +1,8 @@
 package acceptance.backend.tests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import org.testng.annotations.*;
-
-import org.openqa.selenium.*;
+import org.testng.annotations.Test;
 
 import java.util.Random;
 
@@ -12,74 +10,84 @@ public class CompanyTests extends TestBaseAdmin {
 
 ChromeDriver driver;
 
-  @Test (priority = 0)
+  @Test
   public void testSendRegisterLinkForCompany() throws Exception {
+    long now = System.currentTimeMillis();
+    String email = String.format("dk%s@test.test", now);
+
     appManager.getNavHelper().openCompanyPageWithNotRegisterStatus();
     appManager.getCompanyPageHelper().clickSendRegisterLinkButton();
-    appManager.getCompanyPageHelper().fillEmailField(By.id("email"), "dariakhomenko@aurocraft.com"+ new Random().nextInt(10000));
+    appManager.getCompanyPageHelper().fillEmailField(By.id("email"), email);
     appManager.getCompanyPageHelper().clickSendButton();
-    //   assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Список компаній"));
+    appManager.getCompanyPageHelper().closeToastContainer();
+//    assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Список компаній"));
+ //   assertTrue(driver.findElement(By.xpath("//tr[1]//td[8]//button[1]")).getText().contains("Відправити посилання повторно"));
   }
 
-  @Test (priority = 1)
+
+
+  @Test
   public void testResendRegisterLinkForCompany() throws Exception {
+    long now = System.currentTimeMillis();
+    String email = String.format("%s@test.test", now);
     appManager.getNavHelper().openCompanyPageWithResendRegisterStatus();
     appManager.getCompanyPageHelper().clickSendRegisterLinkButton();
-  //  appManager.getCompanyPageHelper().fillEmailField(By.id("email"), "dariakhomenko@aurocraft.com");
+    Thread.sleep(2000);
     appManager.getCompanyPageHelper().clickSendButton();
- //   assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Список компаній"));
+    appManager.getCompanyPageHelper().closeToastContainer();
+//assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Список компаній"));
   }
 
-  @Test (priority = 2)
+  @Test
   public void testGoToCardsOfCompanyPage() throws Exception {
     appManager.getNavHelper().openCompanyPage();
     appManager.getCompanyPageHelper().waitAndClickCardButton();
 //    assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Картки"));
   }
 
-  @Test (priority = 3)
+  @Test
   public void testGoToCardsOfCompanyPageFromProfile() throws Exception {
     appManager.getNavHelper().openCompanyProfilePage();
     appManager.getCompanyPageHelper().waitAndClickCompanyButton();
 //    assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Картки"));
   }
 
-  @Test (priority = 4)
+  @Test
   public void testGoToTransactionsOfCompanyPage() throws Exception {
     appManager.getNavHelper().openCompanyPage();
     appManager.getCompanyPageHelper().waitAndClickTransactionsButton();
     //   assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Транзакції"));
   }
 
-  @Test (priority = 5)
+  @Test
   public void testGoToTransactionsOfCompanyPageFromProfile() throws Exception {
     appManager.getNavHelper().openCompanyProfilePage();
     appManager.getCompanyPageHelper().waitAndClickTransactionsButtonFromCompanyProfile();
 //    assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Транзакції"));
   }
 
-  @Test (priority = 6)
+  @Test
   public void testGoToClientsUsersPage() throws Exception {
     appManager.getNavHelper().openCompanyPage();
     appManager.getCompanyPageHelper().waitAndClickUsersButton();
     //   assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Список користувачів"));
   }
 
-  @Test (priority = 7)
+  @Test
   public void testGoToClientsUsersPageFromProfile() throws Exception {
     appManager.getNavHelper().openCompanyProfilePage();
     appManager.getCompanyPageHelper().waitAndClickUsersButtonFromCompanyPage();
     //   assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Список користувачів"));
   }
 
-  @Test (priority = 8)
+  @Test
   public void testGoToCompanyProfilePage() throws Exception {
     appManager.getNavHelper().openCompanyPageWithRegisterStatus();
     appManager.getCompanyPageHelper().waitAndClickCompanyProfilePageButton();
 //    assertTrue(driver.findElement(By.xpath("//b[contains(text(),'1')]")).getText().contains("Назва компанії в 1С:"));
   }
 
-  @Test (priority = 9)
+  @Test
   public void testModifyCompanyProfile() throws Exception {
     appManager.getNavHelper().openCompanyProfilePage();
 

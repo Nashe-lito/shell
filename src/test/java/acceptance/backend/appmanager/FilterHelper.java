@@ -34,6 +34,10 @@ public class FilterHelper extends HelperBaseAdm {
     type(By.id("managerId"), filtersData.getManagerId());
   }
 
+  public void fillFieldsManager(String manager) {
+    select(manager, By.id("manager"));
+  }
+
   public void fillFieldcardNumber(String cardNumber) {
     type(By.id("cardNumber"), cardNumber);
   }

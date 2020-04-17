@@ -2,6 +2,7 @@ package acceptance.frontend.tests;
 
 import acceptance.frontend.base.TestBase;
 import acceptance.frontend.model.UserData;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,31 +14,40 @@ public class UsersDeleteAndBlockTests extends TestBase {
   @Test
   public void testBlockUserThroughTable() throws Exception {
     app.getNavigationHelper().openActiveUsersPage();
-    if (!app.getUserHelper().isThereAUser()) {
+    Thread.sleep(2000);
+    if (app.getNavigationHelper().isElementPresent(By.xpath("//li[@class='c-pagination__item']//a[@class='c-pagination__link']"))) {
+      app.getNavigationHelper().clickOnPagination();
+    } if (!app.getUserHelper().isThereAUser()) {
       app.getUserHelper().createUser(new UserData("Name", "Surname", "accountant", "test@test.test" + new Random()
               .nextInt(10000), "+380987165311", "test"+ new Random()
               .nextInt(10000), "1qaz@WSX3edc"));
+      app.getNavigationHelper().openActiveUsersPage();
     }
-    app.getNavigationHelper().openActiveUsersPage();
     List<UserData> before = app.getUserHelper().getUserList();
     app.getUserHelper().openPopoverOnUsersPage(before.size() - 1);
     app.getUserHelper().clickOnLockLinkOnUsersPage();
     app.getUserHelper().confirmAction();
     app.getUserHelper().clickOK();
+/*    Thread.sleep(2000);
+    if (app.getNavigationHelper().isElementPresent(By.xpath("//li[@class='c-pagination__item']//a[@class='c-pagination__link']"))) {
+      app.getNavigationHelper().clickOnPagination();
+    }*/
     List<UserData> after = app.getUserHelper().getUserList();
     Assert.assertEquals(after.size(), before.size() - 1);
   }
 
-
   @Test
   public void testBlockUserFromModifyPage() throws Exception {
     app.getNavigationHelper().openActiveUsersPage();
-    if (!app.getUserHelper().isThereAUser()) {
+    Thread.sleep(2000);
+    if (app.getNavigationHelper().isElementPresent(By.xpath("//li[@class='c-pagination__item']//a[@class='c-pagination__link']"))) {
+      app.getNavigationHelper().clickOnPagination();
+    } if (!app.getUserHelper().isThereAUser()) {
       app.getUserHelper().createUser(new UserData("Name", "Surname", "accountant", "test@test.test" + new Random()
               .nextInt(10000), "+380987165311", "test"+ new Random()
               .nextInt(10000), "1qaz@WSX3edc"));
+      app.getNavigationHelper().openActiveUsersPage();
     }
-    app.getNavigationHelper().openActiveUsersPage();
     List<UserData> before = app.getUserHelper().getUserList();
     app.getUserHelper().openPopoverOnUsersPage(before.size() - 1);
     app.getUserHelper().clickOnLinkModifyUserPage();
@@ -45,6 +55,10 @@ public class UsersDeleteAndBlockTests extends TestBase {
     app.getUserHelper().confirmAction();
     app.getUserHelper().clickOK();
     app.getNavigationHelper().openActiveUsersPage();
+    Thread.sleep(2000);
+    if (app.getNavigationHelper().isElementPresent(By.xpath("//li[@class='c-pagination__item']//a[@class='c-pagination__link']"))) {
+      app.getNavigationHelper().clickOnPagination();
+    }
     List<UserData> after = app.getUserHelper().getUserList();
     Assert.assertEquals(after.size(), before.size() - 1);
   }
@@ -52,19 +66,25 @@ public class UsersDeleteAndBlockTests extends TestBase {
   @Test
   public void testUnblockedUserThroughTable() throws Exception {
     app.getNavigationHelper().openBlockedUsersPage();
-    if (!app.getUserHelper().isThereAUser()) {
+    Thread.sleep(2000);
+    if (app.getNavigationHelper().isElementPresent(By.xpath("//li[@class='c-pagination__item']//a[@class='c-pagination__link']"))) {
+      app.getNavigationHelper().clickOnPagination();
+    } if (!app.getUserHelper().isThereAUser()) {
       app.getUserHelper().createUser(new UserData("Name", "Surname", "accountant", "test@test.test" + new Random()
               .nextInt(10000), "+380987165311", "test"+ new Random()
               .nextInt(10000), "1qaz@WSX3edc"));
       app.getNavigationHelper().openActiveUsersPage();
       app.getUserHelper().lockUser();
+      app.getNavigationHelper().openBlockedUsersPage();
     }
-    app.getNavigationHelper().openBlockedUsersPage();
     List<UserData> before = app.getUserHelper().getUserList();
     app.getUserHelper().openPopoverOnUsersPage(before.size() - 1);
     app.getUserHelper().clickOnUnlockLinkOnUsersPage();
     app.getUserHelper().confirmAction();
     app.getUserHelper().clickOK();
+    if (app.getNavigationHelper().isElementPresent(By.xpath("//li[@class='c-pagination__item']//a[@class='c-pagination__link']"))) {
+      app.getNavigationHelper().clickOnPagination();
+    }
     List<UserData> after = app.getUserHelper().getUserList();
     Assert.assertEquals(after.size(), before.size() - 1);
   }
@@ -72,14 +92,17 @@ public class UsersDeleteAndBlockTests extends TestBase {
   @Test
   public void testUnblockUserFromModifyPage() throws Exception {
     app.getNavigationHelper().openBlockedUsersPage();
-    if (!app.getUserHelper().isThereAUser()) {
+    Thread.sleep(2000);
+    if (app.getNavigationHelper().isElementPresent(By.xpath("//li[@class='c-pagination__item']//a[@class='c-pagination__link']"))) {
+      app.getNavigationHelper().clickOnPagination();
+    } if (!app.getUserHelper().isThereAUser()) {
       app.getUserHelper().createUser(new UserData("Name", "Surname", "accountant", "test@test.test" + new Random()
               .nextInt(10000), "+380987165311", "test"+ new Random()
               .nextInt(10000), "1qaz@WSX3edc"));
       app.getNavigationHelper().openActiveUsersPage();
       app.getUserHelper().lockUser();
+      app.getNavigationHelper().openBlockedUsersPage();
     }
-    app.getNavigationHelper().openBlockedUsersPage();
     List<UserData> before = app.getUserHelper().getUserList();
     app.getUserHelper().openPopoverOnUsersPage(before.size() - 1);
     app.getUserHelper().clickOnLinkModifyUserPage();
@@ -87,6 +110,9 @@ public class UsersDeleteAndBlockTests extends TestBase {
     app.getUserHelper().confirmAction();
     app.getUserHelper().clickOK();
     app.getNavigationHelper().openBlockedUsersPage();
+    if (app.getNavigationHelper().isElementPresent(By.xpath("//li[@class='c-pagination__item']//a[@class='c-pagination__link']"))) {
+      app.getNavigationHelper().clickOnPagination();
+    }
     List<UserData> after = app.getUserHelper().getUserList();
     Assert.assertEquals(after.size(), before.size() - 1);
   }
@@ -94,12 +120,15 @@ public class UsersDeleteAndBlockTests extends TestBase {
   @Test
   public void testDeleteUserThroughTable() throws Exception {
     app.getNavigationHelper().goToUsersPage();
-    if (!app.getUserHelper().isThereAUser()) {
+    Thread.sleep(2000);
+    if (app.getNavigationHelper().isElementPresent(By.xpath("//li[@class='c-pagination__item']//a[@class='c-pagination__link']"))) {
+      app.getNavigationHelper().clickOnPagination();
+    } if (!app.getUserHelper().isThereAUser()) {
       app.getUserHelper().createUser(new UserData("Name", "Surname", "accountant", "test@test.test" + new Random()
               .nextInt(10000), "+380987165311", "test"+ new Random()
               .nextInt(10000), "1qaz@WSX3edc"));
+      app.getUserHelper().getUsersPageAndRefresh();
     }
-    app.getUserHelper().getUsersPageAndRefresh();
     List<UserData> before = app.getUserHelper().getUserList();
     app.getUserHelper().openPopoverOnUsersPage(before.size() - 1);
     app.getUserHelper().clickDeleteLinkUsersPage();
@@ -108,21 +137,27 @@ public class UsersDeleteAndBlockTests extends TestBase {
     Assert.assertEquals(after.size(), before.size() - 1);
   }
 
-
   @Test
   public void testDeleteUserFromModifyPage() throws Exception {
     app.getNavigationHelper().goToUsersPage();
-    if (!app.getUserHelper().isThereAUser()) {
+    Thread.sleep(2000);
+    if (app.getNavigationHelper().isElementPresent(By.xpath("//li[@class='c-pagination__item']//a[@class='c-pagination__link']"))) {
+      app.getNavigationHelper().clickOnPagination();
+    } if (!app.getUserHelper().isThereAUser()) {
       app.getUserHelper().createUser(new UserData("Name", "Surname", "accountant", "test@test.test" + new Random()
               .nextInt(10000), "+380987165311", "test"+ new Random()
               .nextInt(10000), "1qaz@WSX3edc"));
+      app.getUserHelper().getUsersPageAndRefresh();
     }
-    app.getUserHelper().getUsersPageAndRefresh();
     List<UserData> before = app.getUserHelper().getUserList();
     app.getUserHelper().openPopoverOnUsersPage(before.size() - 1);
     app.getUserHelper().clickOnLinkModifyUserPage();
     app.getUserHelper().clickOnDeleteUserButton();
     app.getUserHelper().confirmDeteleUser();
+    Thread.sleep(2000);
+    if (app.getNavigationHelper().isElementPresent(By.xpath("//li[@class='c-pagination__item']//a[@class='c-pagination__link']"))) {
+      app.getNavigationHelper().clickOnPagination();
+    }
     List<UserData> after = app.getUserHelper().getUserList();
     Assert.assertEquals(after.size(), before.size() - 1);
   }

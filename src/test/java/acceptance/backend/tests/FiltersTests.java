@@ -1,16 +1,16 @@
 package acceptance.backend.tests;
 
 import acceptance.backend.model.FiltersData;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertTrue;
+import static org.junit.Assert.assertTrue;
 
 public class FiltersTests extends TestBaseAdmin {
 
 
-  @Test(priority = 0)
-  public void testFiltersOnTheCompanyPage() throws Exception
-  {
+  @Test
+  public void testFiltersOnTheCompanyPage() throws Exception {
     appManager.getNavHelper().openCompanyPage();
     appManager.getFilterHelper().waitAndClickFilterContainer();
     appManager.getFilterHelper().fillFieldClientId("кв-0001332");
@@ -21,27 +21,25 @@ public class FiltersTests extends TestBaseAdmin {
     appManager.getFilterHelper().selectStatus("0");
     appManager.getFilterHelper().selectRegistration("registered");
     appManager.getFilterHelper().clickOnFilterButton();
-
-  //  assertTrue(appManager.getFilterHelper().driver.findElement(By.xpath("//tbody/tr[1]/td[2]")).getText().contains("КВ-0001332"));
+    assertTrue(appManager.getFilterHelper().driver.findElement(By.xpath("//tbody/tr[1]/td[2]")).getText().contains("КВ-0001332"));
   }
 
-  @Test(priority = 1)
-  public void testFiltersOnClientUsersPage() throws Exception{
+  @Test
+  public void testFiltersOnClientUsersPage() throws Exception {
     appManager.getNavHelper().openUserOfCompanyPage();
     appManager.getFilterHelper().waitAndClickFilterContainer();
     appManager.getFilterHelper().selectRole("адмін");
     appManager.getFilterHelper().selectUsersStatus("активний");
-    appManager.getFilterHelper().fillFieldCompany("Нек-Сус");
+    appManager.getFilterHelper().fillFieldCompany("E");
     appManager.getFilterHelper().fillFieldClient1cId("КВ-0001332");
-    appManager.getFilterHelper().fillFieldEmail("test@test.test");
-    appManager.getFilterHelper().fillFieldFullName("Surname");
+    appManager.getFilterHelper().fillFieldEmail("dm.bogdanovych@aurocraft.com");
+    appManager.getFilterHelper().fillFieldFullName("Шевчук");
     appManager.getFilterHelper().clickOnFilterButton();
-
-    //    assertTrue(appManager.getFilterHelper().driver.findElement(By.xpath("//tbody/tr[1]/td[2]")).getText().contains("test@test.test"));
+    assertTrue(appManager.getFilterHelper().driver.findElement(By.xpath("//tbody/tr[1]/td[2]")).getText().contains("dm.bogdanovych@aurocraft.com"));
   }
 
-  @Test(priority = 2)
-  public void testFiltersOnClientCardsPage() throws Exception{
+  @Test
+  public void testFiltersOnClientCardsPage() throws Exception {
     appManager.getNavHelper().openClientOfCompanyPage();
     appManager.getFilterHelper().waitAndClickFilterContainer();
     appManager.getFilterHelper().fillFieldClientId("кв-0001332");
@@ -49,12 +47,11 @@ public class FiltersTests extends TestBaseAdmin {
     appManager.getFilterHelper().fillFieldcardNumber("2101039");
     appManager.getFilterHelper().selectStatus("1");
     appManager.getFilterHelper().clickOnFilterButton();
-
-    //   assertTrue(appManager.getFilterHelper().driver.findElement(By.xpath("//tbody/tr[1]/td[2]")).getText().contains("2101039"));
+    assertTrue(appManager.getFilterHelper().driver.findElement(By.xpath("//tbody/tr[1]/td[2]")).getText().contains("2101039"));
   }
 
-  @Test(priority = 3)
-  public void testClientsTransactionsPage() throws Exception{
+  @Test
+  public void testClientsTransactionsPage() throws Exception {
     appManager.getNavHelper().openClientsTransactionsPage();
     appManager.getFilterHelper().waitAndClickFilterContainer();
     appManager.getFilterHelper().fillFieldClientId("кв-0001332");
@@ -66,10 +63,11 @@ public class FiltersTests extends TestBaseAdmin {
     appManager.getFilterHelper().selectType("write-off");
     appManager.getFilterHelper().selectGamGroup();
     appManager.getFilterHelper().selectGam();
+    appManager.getUsersOfAdminHelper().scrollDown("scroll(0,  100)");
+    appManager.getFilterHelper().fillFieldsManager("КВЦ0000161");
     appManager.getFilterHelper().clickOnFilterButton();
-
-    //   assertTrue(appManager.getFilterHelper().driver.findElement(By.xpath("//tbody/tr[1]/td[5]")).getText().contains("Бензин Mustang 92"));
-
+    assertTrue(appManager.getFilterHelper().driver.findElement(By.xpath("//tbody/tr[1]/td[5]")).getText().contains("Бензин Mustang 92"));
+    assertTrue(appManager.getFilterHelper().driver.findElement(By.xpath("//div[@class='alert alert-info']//h2")).getText().contains("Сума транзакцій за період"));
   }
 
 }

@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.Random;
 
-public class SentFeedback {
+public class SentFeedbackTests {
   private static Response resp = RestAssured.given()
           .baseUri("https://shell-b2b.test.aurocraft.com/api")
           .basePath("/v1/oauth")

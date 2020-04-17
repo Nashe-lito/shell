@@ -130,7 +130,7 @@ public class CompanyApiTests {
     Assert.assertEquals(statusCode, 400);
   }
 
-  @DataProvider(name= "getNegativeData")
+  @DataProvider(name = "getNegativeData")
   Object[][] getNegativeData() throws IOException {
     String path = System.getProperty("user.dir") + "/src/test/resources/NegativeDataForCompanyFormFields.xlsx";
     int rownum = XLUtils.getRowCount(path, "Page1");

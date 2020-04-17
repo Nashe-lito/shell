@@ -2,9 +2,6 @@ package acceptance.backend.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 
 import static org.testng.Assert.assertTrue;
 
@@ -14,6 +11,7 @@ public class SessHelper extends HelperBaseAdm {
    super(driver);
   }
 
+/*
   @DataProvider
   public Object[][] dataProviderMethod() {
     return new Object[][]{
@@ -23,6 +21,7 @@ public class SessHelper extends HelperBaseAdm {
   }
 
   @Parameters({"username", "password"})
+*/
 
   public void login(String username, String password) {
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/admin/sign-in");

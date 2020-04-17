@@ -2,12 +2,9 @@ package acceptance.backend.appmanager;
 
 import acceptance.backend.model.UsersOfAdminData;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,6 +38,9 @@ public class UsersOfAdminHelper extends HelperBaseAdm {
     click(By.xpath("//a[@id='bs-select-2-0']/span"));
   }
 
+  public void clickOnBackButton() {
+    click(By.xpath("//a[contains(@class,'btn waves-effect waves-light btn-default')]"));
+  }
   public void clickOnSubmitAndRedirectButton() {
     click(By.id("btn__submit-and-redirect"));
   }

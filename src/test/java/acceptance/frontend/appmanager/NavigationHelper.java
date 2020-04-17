@@ -3,8 +3,6 @@ package acceptance.frontend.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.util.concurrent.TimeUnit;
-
 public class NavigationHelper extends HelperBase{
 
 
@@ -65,5 +63,10 @@ public class NavigationHelper extends HelperBase{
 
   public void openInvoiceCalculationPage(){
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/documents/invoice/calculation");
+  }
+
+  public void clickOnPagination()
+  {click(By.xpath("//li[@class='c-pagination__item']//a[@class='c-pagination__link']"));
+
   }
 }

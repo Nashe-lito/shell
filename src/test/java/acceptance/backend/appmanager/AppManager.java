@@ -23,6 +23,7 @@ public class AppManager {
   private NavHelper navHelper;
   private FilterHelper filterHelper;
   private UsersOfAdminHelper usersOfAdminHelper;
+  private TransactionHelper transactionHelper;
 
   public StringBuffer verificationErrors = new StringBuffer();
   private String browser;
@@ -36,25 +37,26 @@ public class AppManager {
     String target = System.getProperty("target", "local");
     properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
 
-      if (browser.equals(BrowserType.FIREFOX)) {
-        driver = new FirefoxDriver();
-      } else if (browser.equals(BrowserType.CHROME)) {
-        driver = new ChromeDriver();
-      }else if (browser.equals(BrowserType.SAFARI)) {
-        driver = new SafariDriver();
-      }
+    if (browser.equals(BrowserType.FIREFOX)) {
+      driver = new FirefoxDriver();
+    } else if (browser.equals(BrowserType.CHROME)) {
+      driver = new ChromeDriver();
+    } else if (browser.equals(BrowserType.SAFARI)) {
+      driver = new SafariDriver();
+    }
 
 
     driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-      driver.get(properties.getProperty("web.baseUrlAdmin"));
-      Dimension d = new Dimension(1400, 877);
-      driver.manage().window().setSize(d);
+    driver.get(properties.getProperty("web.baseUrlAdmin"));
+    Dimension d = new Dimension(1400, 877);
+    driver.manage().window().setSize(d);
     filterHelper = new FilterHelper(driver);
     navHelper = new NavHelper(driver);
     sessHelper = new SessHelper(driver);
     companyPageHelper = new CompanyPageHelper(driver);
     userHelper = new UserHelper(driver);
     usersOfAdminHelper = new UsersOfAdminHelper(driver);
+    transactionHelper = new TransactionHelper(driver);
     sessHelper.login(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
   }
 
@@ -79,9 +81,11 @@ public class AppManager {
     return userHelper;
   }
 
-  public UsersOfAdminHelper getUsersOfAdminHelper(){
+  public UsersOfAdminHelper getUsersOfAdminHelper() {
     return usersOfAdminHelper;
   }
+
+  public TransactionHelper getTransactionHelper (){return transactionHelper;}
 }
 
 

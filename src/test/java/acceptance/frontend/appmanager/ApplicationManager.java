@@ -85,4 +85,8 @@ public class ApplicationManager {
   public SessionHelper getSessionHelper() {
     return sessionHelper;
   }
+
+ /* public byte[] takeScreenshot(){
+    return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+  }*/
 }

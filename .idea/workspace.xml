@@ -2,16 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aaa3d8ee-0ff4-46e9-bf31-477a5eadbec4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/CheckingAvailabilityOfPagesForAccountantTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/CheckingAvailabilityOfPagesForManagerCallCenterTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/CheckingAvailabilityOfPagesForManagerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/TransactionHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/TransactionsTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/tests/InvoiceTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/AppManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/AppManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/FilterHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/FilterHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/HelperBaseAdm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/HelperBaseAdm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/SessHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/SessHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/UsersOfAdminHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/UsersOfAdminHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/CompanyTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/CompanyTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/FiltersTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/FiltersTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/UsersCompanyTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/UsersCompanyTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/UsersOfAdminCreateTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/backend/tests/UsersOfAdminCreateTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/ClientAuthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/ClientAuthTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/CreateNewUserOfCompanyTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/CreateNewUserOfCompanyTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/NavigationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/appmanager/NavigationHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/base/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/UsersCreateTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/UsersCreateTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/UsersDeleteAndBlockTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/UsersDeleteAndBlockTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/UsersModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/UsersModificationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/CompanyApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/CompanyApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/SentFeedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/SentFeedbackTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/shell$AuthTests_testAuth.ic" NAME="AuthTests.testAuth Coverage Results" MODIFIED="1581499429926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -148,33 +170,36 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test/logfiles" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/build" />
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="api.tests" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="api.tests" />
+      <recent name="acceptance.backend.appmanager" />
+      <recent name="acceptance.backend" />
+      <recent name="acceptance.frontend.company.appmanager" />
+      <recent name="acceptance.frontend.company.tests" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="api.appmanager" />
       <recent name="api.tests" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="acceptance.backend.appmanager" />
-      <recent name="acceptance.backend" />
-      <recent name="acceptance.frontend.company.appmanager" />
-      <recent name="acceptance.frontend.company.tests" />
-      <recent name="acceptance" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/logfiles" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/build" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CreateNewUserOfCompanyTests.testSendPostWithActualDataReturn2001">
-    <configuration name="CreateNewUserOfCompanyTests.testSendPostWithActualDataReturn2001" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.UsersOfAdminCreateTests.testCreateUserWithBackButtons">
+    <configuration name="InvoiceTests.testSuppliestSendPostWithActualDataReturn200" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;api.CreateNewUserOfCompanyTests.testSendPostWithActualDataReturn2001&quot;" />
+        <option name="scriptParameters" value="--tests &quot;api.tests.InvoiceTests.testSuppliestSendPostWithActualDataReturn200&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -189,12 +214,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UsersDeleteAndBlockTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;api.tests.LoginTests&quot;" />
+        <option name="scriptParameters" value="--tests &quot;acceptance.frontend.tests.UsersDeleteAndBlockTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -209,12 +234,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SearchCardTests.testClickOnCloseIconClearSearchField" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UsersOfAdminCreateTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;acceptance.frontend.tests.SearchCardTests.testClickOnCloseIconClearSearchField&quot;" />
+        <option name="scriptParameters" value="--tests &quot;acceptance.backend.tests.UsersOfAdminCreateTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -229,12 +254,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'api'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UsersOfAdminCreateTests.testCreateUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;api.*&quot;" />
+        <option name="scriptParameters" value="--tests &quot;acceptance.backend.tests.UsersOfAdminCreateTests.testCreateUser&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -249,30 +274,40 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="/Users/daria/Documents/Devel/shell/src/test/resources/testng-frontend.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shell.test" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng-frontend.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="UsersOfAdminCreateTests.testCreateUserWithBackButtons" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;acceptance.backend.tests.UsersOfAdminCreateTests.testCreateUserWithBackButtons&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.LoginTests" />
-      <item itemvalue="Gradle.SearchCardTests.testClickOnCloseIconClearSearchField" />
-      <item itemvalue="TestNG./Users/daria/Documents/Devel/shell/src/test/resources/testng-frontend.xml" />
-      <item itemvalue="Gradle.Tests in 'api'" />
-      <item itemvalue="Gradle.CreateNewUserOfCompanyTests.testSendPostWithActualDataReturn2001" />
+      <item itemvalue="Gradle.UsersDeleteAndBlockTests" />
+      <item itemvalue="Gradle.InvoiceTests.testSuppliestSendPostWithActualDataReturn200" />
+      <item itemvalue="Gradle.UsersOfAdminCreateTests.testCreateUser" />
+      <item itemvalue="Gradle.UsersOfAdminCreateTests" />
+      <item itemvalue="Gradle.UsersOfAdminCreateTests.testCreateUserWithBackButtons" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CreateNewUserOfCompanyTests.testSendPostWithActualDataReturn2001" />
-        <item itemvalue="Gradle.Tests in 'api'" />
-        <item itemvalue="TestNG./Users/daria/Documents/Devel/shell/src/test/resources/testng-frontend.xml" />
-        <item itemvalue="Gradle.SearchCardTests.testClickOnCloseIconClearSearchField" />
-        <item itemvalue="Gradle.LoginTests" />
+        <item itemvalue="Gradle.UsersOfAdminCreateTests.testCreateUserWithBackButtons" />
+        <item itemvalue="Gradle.UsersOfAdminCreateTests.testCreateUser" />
+        <item itemvalue="Gradle.UsersOfAdminCreateTests" />
+        <item itemvalue="Gradle.InvoiceTests.testSuppliestSendPostWithActualDataReturn200" />
+        <item itemvalue="Gradle.UsersDeleteAndBlockTests" />
       </list>
     </recent_temporary>
   </component>
@@ -288,15 +323,6 @@
       <updated>1580991788796</updated>
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -314,9 +340,10 @@
       <screen x="1440" y="90" width="1920" height="1057" />
     </state>
     <state x="2170" y="455" key="#com.intellij.fileTypes.FileTypeChooser/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1582814066587" />
-    <state x="2221" y="309" key="#com.intellij.ide.util.MemberChooser" timestamp="1583931413378">
-      <screen x="1440" y="90" width="1920" height="1057" />
+    <state x="586" y="205" key="#com.intellij.ide.util.MemberChooser" timestamp="1586942929295">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state x="586" y="205" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1586942929295" />
     <state x="2221" y="309" key="#com.intellij.ide.util.MemberChooser/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583931413378" />
     <state x="2148" y="401" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1583420928495">
       <screen x="1440" y="90" width="1920" height="1057" />
@@ -326,17 +353,19 @@
       <screen x="1440" y="90" width="1920" height="1057" />
     </state>
     <state x="2027" y="300" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583321287602" />
-    <state x="2143" y="380" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1582817142580">
-      <screen x="1440" y="90" width="1920" height="1057" />
+    <state x="527" y="264" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585314570025">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state x="527" y="264" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.877@0.23.1440.877" timestamp="1585314570024" />
     <state x="2143" y="380" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1582817142580" />
     <state x="2113" y="378" key="#com.intellij.refactoring.memberPullUp.PullUpDialog" timestamp="1583150648811">
       <screen x="1440" y="90" width="1920" height="1057" />
     </state>
     <state x="2113" y="378" key="#com.intellij.refactoring.memberPullUp.PullUpDialog/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583150648811" />
-    <state x="1765" y="90" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584011981416">
-      <screen x="1440" y="90" width="1920" height="1057" />
+    <state x="118" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584623249168">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state x="118" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1584623249168" />
     <state x="1765" y="90" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1584011981416" />
     <state x="2146" y="372" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583853238177">
       <screen x="1440" y="90" width="1920" height="1057" />
@@ -350,54 +379,62 @@
       <screen x="1440" y="90" width="1920" height="1057" />
     </state>
     <state x="2117" y="252" key="#shell_[downloadAllure]/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583142407155" />
-    <state width="1398" height="370" key="GridCell.Tab.0.bottom" timestamp="1584104513121">
+    <state width="1398" height="252" key="GridCell.Tab.0.bottom" timestamp="1587123381557">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="370" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1584104513121" />
+    <state width="1398" height="252" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587123381557" />
     <state width="1878" height="370" key="GridCell.Tab.0.bottom/1440.67.1920.1080/0.0.1440.900@1440.67.1920.1080" timestamp="1583136669211" />
     <state width="1878" height="370" key="GridCell.Tab.0.bottom/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1584028001570" />
-    <state width="1398" height="370" key="GridCell.Tab.0.center" timestamp="1584104513118">
+    <state width="1398" height="252" key="GridCell.Tab.0.center" timestamp="1587123381556">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="370" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1584104513118" />
+    <state width="1398" height="252" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1587123381556" />
     <state width="1878" height="370" key="GridCell.Tab.0.center/1440.67.1920.1080/0.0.1440.900@1440.67.1920.1080" timestamp="1583136669205" />
     <state width="1878" height="370" key="GridCell.Tab.0.center/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1584028001569" />
-    <state width="1398" height="370" key="GridCell.Tab.0.left" timestamp="1584104513116">
+    <state width="1398" height="252" key="GridCell.Tab.0.left" timestamp="1587123381556">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="370" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1584104513116" />
+    <state width="1398" height="252" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1587123381556" />
     <state width="1878" height="370" key="GridCell.Tab.0.left/1440.67.1920.1080/0.0.1440.900@1440.67.1920.1080" timestamp="1583136669203" />
     <state width="1878" height="370" key="GridCell.Tab.0.left/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1584028001568" />
-    <state width="1398" height="370" key="GridCell.Tab.0.right" timestamp="1584104513118">
+    <state width="1398" height="252" key="GridCell.Tab.0.right" timestamp="1587123381557">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="370" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1584104513118" />
+    <state width="1398" height="252" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1587123381557" />
     <state width="1878" height="370" key="GridCell.Tab.0.right/1440.67.1920.1080/0.0.1440.900@1440.67.1920.1080" timestamp="1583136669206" />
     <state width="1878" height="370" key="GridCell.Tab.0.right/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1584028001569" />
-    <state width="1878" height="357" key="GridCell.Tab.1.bottom" timestamp="1584025378526">
-      <screen x="1440" y="90" width="1920" height="1057" />
+    <state width="1398" height="285" key="GridCell.Tab.1.bottom" timestamp="1587119359740">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1398" height="285" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587119359740" />
     <state width="1878" height="357" key="GridCell.Tab.1.bottom/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1584025378526" />
-    <state width="1878" height="357" key="GridCell.Tab.1.center" timestamp="1584025378524">
-      <screen x="1440" y="90" width="1920" height="1057" />
+    <state width="1398" height="285" key="GridCell.Tab.1.center" timestamp="1587119359739">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1398" height="285" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1587119359739" />
     <state width="1878" height="357" key="GridCell.Tab.1.center/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1584025378524" />
-    <state width="1878" height="357" key="GridCell.Tab.1.left" timestamp="1584025378521">
-      <screen x="1440" y="90" width="1920" height="1057" />
+    <state width="1398" height="285" key="GridCell.Tab.1.left" timestamp="1587119359738">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1398" height="285" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1587119359738" />
     <state width="1878" height="357" key="GridCell.Tab.1.left/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1584025378521" />
-    <state width="1878" height="357" key="GridCell.Tab.1.right" timestamp="1584025378525">
-      <screen x="1440" y="90" width="1920" height="1057" />
+    <state width="1398" height="285" key="GridCell.Tab.1.right" timestamp="1587119359739">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state width="1398" height="285" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1587119359739" />
     <state width="1878" height="357" key="GridCell.Tab.1.right/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1584025378525" />
     <state x="2153" y="265" width="516" height="706" key="RefactorJ.IntroduceParameterObject" timestamp="1583420962132">
       <screen x="1440" y="90" width="1920" height="1057" />
     </state>
     <state x="2153" y="265" width="516" height="706" key="RefactorJ.IntroduceParameterObject/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583420962132" />
-    <state x="377" y="63" key="SettingsEditor" timestamp="1584111101569">
+    <state x="526" y="386" key="ReplaceDuplicatesPrompt" timestamp="1585217017384">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="377" y="63" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1584111101569" />
+    <state x="526" y="386" key="ReplaceDuplicatesPrompt/0.23.1440.877@0.23.1440.877" timestamp="1585217017384" />
+    <state x="377" y="63" key="SettingsEditor" timestamp="1587119317517">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="377" y="63" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1587119317516" />
     <state x="1943" y="227" key="SettingsEditor/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1582816819368" />
     <state x="2205" y="403" key="chooseDestDirectoryDialog" timestamp="1583851649676">
       <screen x="1440" y="90" width="1920" height="1057" />
@@ -411,17 +448,19 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="0" y="26" width="1440" height="860" maximized="true" key="dock-window-1/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583846184468" />
-    <state x="2146" y="378" key="extract.method.dialog" timestamp="1583421117285">
-      <screen x="1440" y="90" width="1920" height="1057" />
+    <state x="530" y="262" width="524" height="484" key="extract.method.dialog" timestamp="1585317428488">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state x="530" y="262" width="524" height="484" key="extract.method.dialog/0.23.1440.877@0.23.1440.877" timestamp="1585317428487" />
     <state x="2146" y="378" key="extract.method.dialog/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583421117285" />
     <state x="2605" y="267" key="refactoring.ChangeSignatureDialog" timestamp="1583922687763">
       <screen x="1440" y="90" width="1920" height="1057" />
     </state>
     <state x="2605" y="267" key="refactoring.ChangeSignatureDialog/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583922687763" />
-    <state x="2073" y="325" width="670" height="676" key="search.everywhere.popup" timestamp="1583828037464">
-      <screen x="1440" y="90" width="1920" height="1057" />
+    <state x="475" y="218" width="670" height="561" key="search.everywhere.popup" timestamp="1586958721414">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state x="475" y="218" width="670" height="561" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1586958721414" />
     <state x="2073" y="325" width="670" height="676" key="search.everywhere.popup/1440.90.1920.1057/0.23.1440.877@1440.90.1920.1057" timestamp="1583828037464" />
   </component>
   <component name="XDebuggerManager">
@@ -443,25 +482,13 @@
           </properties>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/acceptance/backend/appmanager/FilterHelper.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/UsersDeleteAndBlockTests.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/UsersDeleteAndBlockTests.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/UsersDeleteAndBlockTests.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="39" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/api/drafts/NewUserCreateTests.java</url>
+          <line>31</line>
+          <properties class="api.drafts.NewUserCreateTests" method="testSendPostWithActualDataReturn200">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/DriversDeleteAndBlockTests.java</url>
@@ -474,16 +501,6 @@
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/acceptance/backend/tests/UsersOfAdminCreateTests.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/acceptance/backend/tests/UsersOfAdminCreateTests.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/DriversCreateTests.java</url>
           <line>78</line>
           <option name="timeStamp" value="57" />
@@ -494,19 +511,14 @@
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/acceptance/frontend/tests/UsersModificationTests.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/api/tests/LoginTests.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/api/CreateNewUserOfCompanyTests.java</url>
-          <line>45</line>
+          <url>file://$PROJECT_DIR$/src/test/java/api/drafts/CreateNewUserOfCompanyTests.java</url>
+          <line>55</line>
           <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/acceptance/backend/tests/FiltersTests.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="70" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

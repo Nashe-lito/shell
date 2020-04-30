@@ -2,7 +2,9 @@ package acceptance.frontend.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DocumentHelper extends HelperBase{
 
@@ -26,6 +28,8 @@ public void selectStartOfPeriod(){
   }
 
   public void clickOnReturnToDocumentsButton(){
+    WebDriverWait wait = new WebDriverWait(driver, 10);
+    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='c-button c-button--alt']//span[@class='c-button__label']")));
     click(By.xpath("//div[@class='c-button c-button--alt']//span[@class='c-button__label']"));
   }
 
@@ -44,7 +48,6 @@ public void selectStartOfPeriod(){
   public void selectAdnFillTMC(String sum){
     click(By.xpath("//select[@class='c-select__native']"));
     new Select(driver.findElement(By.xpath("//div[@id='root']/div/div[3]/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div/div/div/div/span[2]/select"))).selectByVisibleText("Бензин VP А-95-Евро5-Е5");
-
     type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div/div/div[1]/div/div/div[2]/div/input"), sum);
   }
 

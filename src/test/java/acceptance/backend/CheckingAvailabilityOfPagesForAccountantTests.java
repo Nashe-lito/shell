@@ -31,7 +31,7 @@ public class CheckingAvailabilityOfPagesForAccountantTests {
     assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Dashboard"));
   }
 
-  @Test
+  @Test(enabled = false)//баг. пользователь должен видеть страницу
   public void testOpenCompanyPage(){
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/admin/clients/client/list");
     assertTrue(driver.findElement(By.xpath("//div/h2[2]")).getText().contains("403"));

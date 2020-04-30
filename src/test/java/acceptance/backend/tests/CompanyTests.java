@@ -1,7 +1,7 @@
 package acceptance.backend.tests;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.Random;
@@ -9,8 +9,6 @@ import java.util.Random;
 import static org.junit.Assert.assertTrue;
 
 public class CompanyTests extends TestBaseAdmin {
-
-ChromeDriver driver;
 
   @Test
   public void testSendRegisterLinkForCompany() throws Exception {
@@ -94,21 +92,50 @@ ChromeDriver driver;
     appManager.getCompanyPageHelper().fillCompanyProfileFields("ModNamOfCompany", "test@test.test" + new Random().nextInt(10000), "04212 - Малиновского ул. Н(1-15), Ч(2-10)", "+380987165311");
     appManager.getCompanyPageHelper().clickSubmitAndRedirectButton();
     assertTrue(appManager.getFilterHelper().driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Список компаній"));
-
-  }
- /* @Test(priority = 10)
-  public void testDownloadXLSDocument()throws Exception{
-    appManager.getNavHelper().openCompanyProfilePage();
-    appManager.getCompanyPageHelper().downloadDocument();
-    driver.findElement(By.xpath("//button[@type='submit']")).click();
   }
 
-
-
-  @Test(priority = 11)
-  public void testDownloadPDFDocument()throws Exception{
+ @Test(dataProvider = "docsTypes")
+  public void testDownloadXlsDocument(String value) throws Exception{
     appManager.getNavHelper().openCompanyProfilePage();
+    appManager.getCompanyPageHelper().goToDownloadPage();
+    appManager.getCompanyPageHelper().selectTypeOfDoc(value);
+    appManager.getCompanyPageHelper().downloadXLSDocument();
+    appManager.getCompanyPageHelper().clickSaveButton();
 
-  }*/
+    assertTrue(appManager.getNavHelper().driver.findElement(By.xpath("//div[contains(@class,'alert-dismissable')]")).getText().contains("Дані успішно збережено"));
+  }
 
+  @Test(dataProvider = "docsTypes")
+  public void testDownloadPDFDocument(String value) throws Exception{
+    appManager.getNavHelper().openCompanyProfilePage();
+    appManager.getCompanyPageHelper().goToDownloadPage();
+    appManager.getCompanyPageHelper().selectTypeOfDoc(value);
+    appManager.getCompanyPageHelper().downloadPDFDocument();
+    appManager.getCompanyPageHelper().clickSaveAndBackButton();
+
+    assertTrue(appManager.getNavHelper().driver.findElement(By.xpath("//h4[contains(@class,'page-title')]")).getText().contains("Профіль"));
+    assertTrue(appManager.getNavHelper().driver.findElement(By.xpath("//div[contains(@class,'alert-dismissable')]")).getText().contains("Дані успішно збережено"));
+  }
+
+  @DataProvider(name = "docsTypes")
+  Object[][] getData(){
+    String docsData[][] = {
+            {"invoice"},
+            {"act-checking"},
+            {"appendix-petroleum-products"},
+            {"card-invoice"},
+            {"acceptance-transfer-act"}
+    };
+    return (docsData);
+  }
+
+  @Test
+  public void testDownloadDocAndClickReturnButton() throws Exception{
+    appManager.getNavHelper().openCompanyProfilePage();
+    appManager.getCompanyPageHelper().goToDownloadPage();
+    appManager.getCompanyPageHelper().downloadXLSDocument();
+    appManager.getCompanyPageHelper().clickBackButton();
+
+    assertTrue(appManager.getNavHelper().driver.findElement(By.xpath("//h4[contains(@class,'page-title')]")).getText().contains("Список компаній"));
+    }
 }

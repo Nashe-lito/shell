@@ -1,11 +1,12 @@
 package acceptance.frontend;
 
-import java.util.concurrent.TimeUnit;
-import org.testng.annotations.*;
-import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.Dimension;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import java.util.concurrent.TimeUnit;
 
 public class AuthTests {
   private WebDriver driver;
@@ -15,8 +16,8 @@ public class AuthTests {
   @BeforeMethod
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    Dimension d = new Dimension(1400,877);
+  //  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    Dimension d = new Dimension(1400, 877);
     driver.manage().window().setSize(d);
   }
 
@@ -37,44 +38,7 @@ public class AuthTests {
   }
 
   @AfterMethod(alwaysRun = true)
-  public void tearDown() throws Exception {
+  public void tearDown() {
     driver.quit();
-    String verificationErrorString = verificationErrors.toString();
-    if (!"".equals(verificationErrorString)) {
-      fail(verificationErrorString);
-    }
-  }
-
-  private boolean isElementPresent(By by) {
-    try {
-      driver.findElement(by);
-      return true;
-    } catch (NoSuchElementException e) {
-      return false;
-    }
-  }
-
-  private boolean isAlertPresent() {
-    try {
-      driver.switchTo().alert();
-      return true;
-    } catch (NoAlertPresentException e) {
-      return false;
-    }
-  }
-
-  private String closeAlertAndGetItsText() {
-    try {
-      Alert alert = driver.switchTo().alert();
-      String alertText = alert.getText();
-      if (acceptNextAlert) {
-        alert.accept();
-      } else {
-        alert.dismiss();
-      }
-      return alertText;
-    } finally {
-      acceptNextAlert = true;
-    }
   }
 }

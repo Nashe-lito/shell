@@ -204,7 +204,6 @@ public class CheckingAvailabilityOfPagesForManagerTests {
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/admin");
   }
 
-
   @AfterClass(alwaysRun = true)
   public void tearDown() throws Exception {
     driver.findElement(By.xpath("//ul[@class='nav navbar-top-links navbar-right pull-right']//a[@class='dropdown-toggle']")).click();

@@ -49,6 +49,38 @@ public class CompanyApiTests {
   }
 
   @Test
+  public void testGetClientDiscount(){
+    RestAssured.baseURI = "https://shell-b2b.test.aurocraft.com/api/v1";
+
+    RequestSpecification httpsRequest = RestAssured.given().log().all().auth().oauth2(token);
+
+    Response responseDiscount = httpsRequest.request(Method.GET, "/discounts");
+
+    String responseBody = responseDiscount.getBody().asString();
+    System.out.println("Response Body is: " + responseBody);
+
+    int statusCode = responseDiscount.getStatusCode();
+    System.out.println("Status Code is " + statusCode);
+    Assert.assertEquals(statusCode, 200);
+  }
+
+  @Test
+  public void testGetNewsList(){
+    RestAssured.baseURI = "https://shellcards.com.ua/api/v1";
+
+    RequestSpecification httpsRequest = RestAssured.given().log().all().auth().oauth2(token);
+
+    Response responseNews = httpsRequest.request(Method.GET, "/news?limit=3");
+
+    String responseBody = responseNews.getBody().asString();
+    System.out.println("Response Body is: " + responseBody);
+
+    int statusCode = responseNews.getStatusCode();
+    System.out.println("Status Code is: " + statusCode);
+    Assert.assertEquals(statusCode, 200);
+  }
+
+  @Test
   public void testGetCompanyProfile() {
     RestAssured.baseURI = "https://shell-b2b.test.aurocraft.com/api/v1";
 

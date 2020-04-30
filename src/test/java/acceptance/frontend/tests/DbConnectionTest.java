@@ -1,13 +1,13 @@
 package acceptance.frontend.tests;
 
-import acceptance.frontend.model.UserData;
-import com.sun.tools.xjc.reader.xmlschema.bindinfo.BIConversion;
 import org.testng.annotations.Test;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DbConnectionTest {
-  @Test
+  @Test (enabled = false)
   public void testDbConnection(){
     Connection conn = null;
     try {

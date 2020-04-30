@@ -67,6 +67,5 @@ public class NavigationHelper extends HelperBase{
 
   public void clickOnPagination()
   {click(By.xpath("//li[@class='c-pagination__item']//a[@class='c-pagination__link']"));
-
   }
 }

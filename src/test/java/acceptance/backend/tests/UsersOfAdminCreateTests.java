@@ -30,13 +30,18 @@ public class UsersOfAdminCreateTests extends TestBaseAdmin {
 /*    appManager.getUsersOfAdminHelper().clickOnSubmitAndRedirectButton();*/
     appManager.getUsersOfAdminHelper().driver.findElement(By.xpath(buttonName)).click();
     assertTrue(appManager.getUsersOfAdminHelper().driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains(text));
+    appManager.getNavHelper().openUsersOfAdminPage();
+    appManager.getUsersOfAdminHelper().scrollDown("scroll(0,  1400)");
+    if (appManager.getNavHelper().isElementPresent(By.xpath("//a[@class='page-link'][contains(text(),'2')]"))) {
+      appManager.getNavHelper().clickOnPagination();
+    }
    int after = appManager.getUsersOfAdminHelper().getUserOfAdminCount();
     Assert.assertEquals(after, before + 1);
   }
 
   @DataProvider(name = "button")
   Object[][] getData(){
-   String buttonData[][]= {
+   String buttonData[][] = {
            {"//button[contains(@class,'btn waves-effect waves-light btn-success')]", "Редагування користувача"},
            {"//button[@id='btn__submit-and-redirect']", "Список користувачів"}
     };
@@ -73,6 +78,5 @@ public class UsersOfAdminCreateTests extends TestBaseAdmin {
     File photo = new File("src/test/resources/5.jpg");
     System.out.println(photo.getAbsolutePath());
     System.out.println(photo.exists());
-
   }
 }

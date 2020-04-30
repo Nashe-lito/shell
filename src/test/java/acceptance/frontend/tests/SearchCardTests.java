@@ -1,12 +1,7 @@
 package acceptance.frontend.tests;
 
 import acceptance.frontend.base.TestBase;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
 
 public class SearchCardTests extends TestBase {
 
@@ -16,8 +11,7 @@ public class SearchCardTests extends TestBase {
     app.getCardHelper().fillSearchInput("2101054");
     app.getCardHelper().clickOnSearchButton();
 
- //   Thread.sleep(3000);
- //   assertTrue(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div[2]/div[1]/span")).getText().contains("2101054"));
+  // assertTrue(app.getNavigationHelper().driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div[2]/div[1]/span")).getText().contains("2101054"));
   }
 
   @Test

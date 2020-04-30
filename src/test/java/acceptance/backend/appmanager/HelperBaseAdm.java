@@ -22,9 +22,6 @@ public class HelperBaseAdm {
   public void select(String registerStatus, By locator) {
     click(locator);
     new Select(driver.findElement(locator)).selectByValue(registerStatus);
-
-    /*driver.findElement(By.id("manager")).click();
-    new Select(driver.findElement(By.id("manager"))).selectByValue("КВЦ0000161");*/
   }
 
 
@@ -59,7 +56,6 @@ public class HelperBaseAdm {
   }
 
   public void attach(By locator, File file) {
-
     driver.findElement(locator).sendKeys(file.getAbsolutePath());
   }
 

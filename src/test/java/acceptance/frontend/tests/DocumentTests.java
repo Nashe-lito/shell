@@ -11,15 +11,15 @@ public class DocumentTests extends TestBase {
     app.getDocumentHelper().selectStartOfPeriod();
     app.getDocumentHelper().selectEndOfPeriod();
     app.getDocumentHelper().clickOnSendButton();
-    Thread.sleep(5000);
+ //   Thread.sleep(5000);
     app.getDocumentHelper().clickOnReturnToDocumentsButton();
   }
 
   @Test
-  public void testInvoiceCustomRequestWithCreditBargaining() throws Exception{
+  public void testInvoiceCustomRequestWithCreditBargaining() throws Exception {
     app.getNavigationHelper().openInvoiceCustomPage();
     app.getDocumentHelper().clickOnSendButton();
-    Thread.sleep(5000);
+  //  Thread.sleep(5000);
     app.getDocumentHelper().clickOnReturnToDocumentsButton();
   }
 
@@ -29,18 +29,17 @@ public class DocumentTests extends TestBase {
     app.getDocumentHelper().selectRadioButtonAnotherAmount();
     app.getDocumentHelper().fillAnotherAmountField("100");
     app.getDocumentHelper().clickOnSendButton();
-    Thread.sleep(3000);
+ //   Thread.sleep(3000);
     app.getDocumentHelper().clickOnReturnToDocumentsButton();
   }
 
   @Test
   public void testInvoiceCalculationRequest() throws Exception {
-  app.getNavigationHelper().openInvoiceCalculationPage();
-  app.getDocumentHelper().clickAddTMCButton();
-  app.getDocumentHelper().selectAdnFillTMC("100");
-  app.getDocumentHelper().clickOnSendButton();
-    Thread.sleep(3000);
+    app.getNavigationHelper().openInvoiceCalculationPage();
+    app.getDocumentHelper().clickAddTMCButton();
+    app.getDocumentHelper().selectAdnFillTMC("100");
+    app.getDocumentHelper().clickOnSendButton();
+   // Thread.sleep(3000);
     app.getDocumentHelper().clickOnReturnToDocumentsButton();
-
   }
 }

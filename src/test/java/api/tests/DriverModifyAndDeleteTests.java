@@ -46,23 +46,7 @@ public class DriverModifyAndDeleteTests {
     JSONArray carNumbers = new JSONArray();
     carNumbers.add(carNumber);
 
-    JSONObject requestParam = new JSONObject();
-    requestParam.put("firstName", "firstName");
-    requestParam.put("lastName", "lastName");
-    requestParam.put("middleName", "middleName");
-    requestParam.put("email", "test@test.test" + new Random().nextInt(1000));
-    requestParam.put("phones", ja);
-    requestParam.put("carsNumbers", carNumbers);
-    requestParam.put("status", "active");
-    requestParam.put("note", "");
-
-    EncoderConfig.encoderConfig().encodeContentTypeAs("charset=utf-8", ContentType.TEXT);
-    httpRequest.header("Content-Type", "application/json");
-    httpRequest.body(requestParam.toJSONString());
-
-    Response responseForCreate = httpRequest.request(Method.POST, "/drivers/create");
-
-    String id = responseForCreate.jsonPath().get("id");
+    String id = createDriverAndGetId(httpRequest);
 
     JSONObject requestEditParam = new JSONObject();
     requestEditParam.put("firstName", "firstNameUpd");
@@ -179,6 +163,9 @@ public class DriverModifyAndDeleteTests {
     int statusCode = responseList.getStatusCode();
     System.out.println("Status Code is: " + statusCode);
     Assert.assertEquals(statusCode, 200);
+
+    // Удалить мусор после теста
+    Response responseForDelete = httpRequest.request(Method.POST, "/drivers/delete/" + id);
   }
 
   @Test

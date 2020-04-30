@@ -17,8 +17,7 @@ public class DriverHelper extends HelperBase {
     click(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[1]/div[2]/a"));
   }
 
-  public void fillDriverFieldsForCreateForm(DriverData driverData){
-          //String surname, String name, String middlename, String email, String status, String tel, String tel2, String carNum, String note){
+  public void fillDriverFieldsForCreateForm(DriverData driverData) {
     type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div[1]/div[1]/div[1]/div[1]/label/input"), driverData.getSurname());
     type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div[1]/div[1]/div[1]/div[2]/label/input"), driverData.getName());
     type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div[1]/div[1]/div[2]/div[1]/label/input"), driverData.getMiddlename());
@@ -28,8 +27,6 @@ public class DriverHelper extends HelperBase {
     new Select(driver.findElement(By.xpath("//div[@id='root']/div/div[3]/div/div/div[2]/div[2]/div/div/div/div[3]/div/label/span[2]/select"))).selectByValue(driverData.getStatus());
 
     type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div[1]/div[2]/div/div[1]/div/div[1]/div/label/input"), driverData.getTel());
-/*    click(By.xpath("//div[@class='c-form-layout__main']//div[2]//div[1]//div[1]//div[1]//div[2]//span[1]"));
-   type(By.xpath("//div[@class='c-form__col']//div[2]//label[1]//input[1]"), driverData.getTel2();*/
 
     click(By.xpath("//div[@class='m-layout__main']//div[3]//div[1]//div[1]//div[1]//div[2]//span[1]"));
     type(By.xpath("//div[@class='m-layout__main']//div[3]//div[1]//div[1]//div[1]//div[1]//div[1]//label[1]//input[1]"), driverData.getCarNum());
@@ -37,7 +34,7 @@ public class DriverHelper extends HelperBase {
     type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div[1]/div[4]/div/div/label/textarea"), driverData.getNote());
   }
 
-  public void fillDriverFieldsForModifyForm(DriverData driverData){
+  public void fillDriverFieldsForModifyForm(DriverData driverData) {
     type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div[1]/div[1]/div[1]/div[1]/label/input"), driverData.getSurname());
     type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div[1]/div[1]/div[1]/div[2]/label/input"), driverData.getName());
     type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div[1]/div[1]/div[2]/div[1]/label/input"), driverData.getMiddlename());
@@ -53,14 +50,15 @@ public class DriverHelper extends HelperBase {
     type(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div[1]/div[4]/div/div/label/textarea"), driverData.getNote());
   }
 
-  public void clickSubmitButton(){
+  public void clickSubmitButton() {
     click(By.xpath("//button[@class='c-button c-button--primary']//span[@class='c-button__label']"));
   }
-  public void clickOkButton(){
+
+  public void clickOkButton() {
     click(By.xpath("//div[@class='c-button c-button--primary']"));
   }
 
-  public void closePopUp(){
+  public void closePopUp() {
     click(By.xpath("//*[@id=\"overlay-root\"]/div/div[4]/div/div/div[2]/div/div[1]/span"));
   }
 
@@ -70,41 +68,38 @@ public class DriverHelper extends HelperBase {
     click(By.xpath("//span/div/div[2]/div/div/p"));
   }
 
-  public void clickOnChangeStatusButtonOnDriversPage(){
+  public void clickOnChangeStatusButtonOnDriversPage() {
     click(By.xpath("//div[@id='root']/div/div[3]/div/div/div[2]/div[2]/div[2]/div[7]/span/div/div/span"));
     click(By.xpath("//div[@id='root']/div/div[3]/div/div/div[2]/div[2]/div[2]/div[7]/span/div/div[2]/div/div[2]/p"));
   }
 
-  public void clickOnDeleteButtonOnDriversPage(){
+  public void clickOnDeleteButtonOnDriversPage() {
     click(By.xpath("//div[@id='root']/div/div[3]/div/div/div[2]/div[2]/div[2]/div[7]/span/div/div/span"));
     click(By.xpath("//div[@id='root']/div/div[3]/div/div/div[2]/div[2]/div[2]/div[7]/span/div/div[2]/div/div[3]/p"));
   }
 
-  public void clickOnYesButton(){
+  public void clickOnYesButton() {
     click(By.xpath("//div[@class='c-button c-button--primary']//span[@class='c-button__label']"));
   }
 
-  public void clickChangeStatusButtonOnModifyPage(){
+  public void clickChangeStatusButtonOnModifyPage() {
     click(By.xpath("//div[@class='c-page-header__actions']//div[2]//span[1]"));
   }
 
-  public void clickDeleteButtonOnModifyPage(){
+  public void clickDeleteButtonOnModifyPage() {
     click(By.xpath("//div[@class='c-page-header__actions']//div[1]//span[1]"));
   }
 
   public void createDriver(DriverData driver) throws InterruptedException {
-          //String surname, String name, String middlename, String email, String status, String tel,  String carNum, String note) throws InterruptedException {
     goToCreateDriverPage();
-   // fillDriverFieldsForCreateForm(surname, name, middlename, email, status, tel,  carNum,  note);
     fillDriverFieldsForCreateForm(driver);
     scrollDown("scroll(0,  1400)");
- clickSubmitButton();
-   // clickOkButton();
+    clickSubmitButton();
   }
 
-  public  void modifyDriver(int before) throws InterruptedException {
+  public void modifyDriver(int before) throws InterruptedException {
     scrollDown("scroll(0,  1400)");
-    goToEditDriverPage(before -1);
+    goToEditDriverPage(before - 1);
     fillDriverFieldsForModifyForm(new DriverData("SurnameTest", "NameTest", "MiddlenameTest", "mod@test.test", "blocked", "+380987165311", "Mod111", "Ea eos harum" + new Random().nextInt(10000)));
     clickSubmitButton();
     clickOkButton();
@@ -115,6 +110,6 @@ public class DriverHelper extends HelperBase {
   }
 
   public int getDriverCount() {
-   return driver.findElements(By.xpath("//span[@class='c-icon c-icon--more']")).size();
+    return driver.findElements(By.xpath("//span[@class='c-icon c-icon--more']")).size();
   }
 }

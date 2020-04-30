@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.util.Random;
 
 public class CompanyPageHelper extends HelperBaseAdm{
@@ -17,9 +18,17 @@ public class CompanyPageHelper extends HelperBaseAdm{
     waitLoaderAndClick(By.xpath("//tr[1]//td[8]//button[1]"), By.id("preloader"));
   }
 
- /* public void closeToastContainer() {
-    waitLoaderAndClick(By.xpath("//div[@id='toast-container']/div/div"), By.xpath("//div[@id='toast-container']/div/div"));
-  }*/
+  public void clickSaveButton(){
+    click(By.xpath("//button[contains(@class,'btn waves-effect waves-light btn-success')]"));
+  }
+  public void clickSaveAndBackButton(){
+    click(By.xpath("//button[@id='btn__submit-and-redirect']"));
+  }
+
+  public void clickBackButton(){
+    click(By.xpath("//a[contains(@class,'btn waves-effect waves-light btn-default')]"));
+  }
+
   public void closeToastContainer() {
     click(By.cssSelector("div.toast-message"));
   }
@@ -75,14 +84,31 @@ public class CompanyPageHelper extends HelperBaseAdm{
     type(By.xpath("//input[@id='accountingPhone']"), tel);
   }
 
-  /*public void downloadDocument() {
-    driver.findElement(By.xpath("//a[4]")).click();
+  public void goToDownloadPage(){
+    click(By.xpath("//a[4]"));
+  }
+
+  public void downloadXLSDocument() throws InterruptedException {
+    File doc = new File("src/test/resources/d6c136f052651438f393322443b98b86180b01a9_1583139496.xls");
+
     WebDriverWait wait = new WebDriverWait(driver, 5);
     boolean invisible = wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("preloader")));
     if (invisible) {
-      driver.findElement(By.id("document")).sendKeys("0a3147406c77ad2aa275d483ec4a4b961b934665_1581947992.pdf");
+      driver.findElement(By.id("document")).sendKeys(doc.getAbsolutePath());
     }
-    driver.findElement(By.id("document")).clear();
-    driver.findElement(By.id("document"));
-  }*/
+  }
+
+  public void downloadPDFDocument() throws InterruptedException {
+    File doc = new File("src/test/resources/1234567890q<>\"'wertyuioasdfghjklzxcvbnm !#$%&'_+-_=_^_`{__@aurocraftcomQWERTYUIOPASDFGHJKLZXCVBNMйцукенгшщзфывапролдячсмитьбЙЦУКЕНГШЩЗ ФЫВАПРОЛД ЯЧСМИТЬБЮ ЇЄ.pdf");
+
+    WebDriverWait wait = new WebDriverWait(driver, 5);
+    boolean invisible = wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("preloader")));
+    if (invisible) {
+      driver.findElement(By.id("document")).sendKeys(doc.getAbsolutePath());
+    }
+  }
+
+  public void selectTypeOfDoc(String typeOfDoc){
+    select(typeOfDoc, By.id("type"));
+  }
 }

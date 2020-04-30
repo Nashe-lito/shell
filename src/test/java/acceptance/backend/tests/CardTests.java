@@ -3,7 +3,6 @@ package acceptance.backend.tests;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,7 +16,7 @@ public class CardTests {
 
   private WebDriver driver;
 
-  @BeforeClass(alwaysRun = true)
+  @BeforeClass
   public void setUp() throws Exception {
     driver = new ChromeDriver();
     driver.manage().window().fullscreen();
@@ -32,7 +31,7 @@ public class CardTests {
     assertTrue(driver.findElement(By.xpath("//h4[@class='page-title']")).getText().contains("Dashboard"));
   }
 
-  /*@Test(priority = 0)
+  @Test(enabled = false)
   public void testEditCard() throws Exception{
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/admin/clients/card/list?clientId=&clientName=&cardNumber=&status=1");
     WebDriverWait wait = new WebDriverWait(driver, 5);
@@ -125,7 +124,7 @@ public class CardTests {
     driver.findElement(By.id("btn__submit-and-redirect")).click();
 
     assertTrue(driver.findElement(By.xpath("//i[@class='fa fa-circle text-purple m-r-5']")).getText().contains("на модерації"));
-  }*/ //у разных карточек разные данные
+  } //у разных карточек разные данные
 
   @AfterClass(alwaysRun = true)
   public void tearDown() throws Exception {

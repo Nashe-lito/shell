@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SearchTests {
-  private static Response aythResponse = RestAssured.given()
+  private static Response authResponse = RestAssured.given()
           .baseUri("https://shell-b2b.test.aurocraft.com/api")
           .basePath("/v1/oauth")
           .contentType(ContentType.JSON)
@@ -22,7 +22,7 @@ public class SearchTests {
           .statusCode(200)
           .extract()
           .response();
-  String token = aythResponse.jsonPath().get("token");
+  String token = authResponse.jsonPath().get("token");
 
   @Test
   public void testGetFuelSearch(){

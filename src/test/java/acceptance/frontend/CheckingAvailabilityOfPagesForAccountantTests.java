@@ -10,6 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertTrue;
@@ -18,6 +19,7 @@ public class CheckingAvailabilityOfPagesForAccountantTests {
     private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
+
   public void setUp() throws Exception {
     driver = new ChromeDriver();
  //   driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -36,12 +38,13 @@ public class CheckingAvailabilityOfPagesForAccountantTests {
     driver.findElement(By.xpath("//input[@class='c-password__input']")).clear();
     driver.findElement(By.xpath("//input[@class='c-password__input']")).sendKeys(password);
     driver.findElement(By.xpath("//button[@class='c-button c-button--primary']")).click();
+
       WebDriverWait wait = new WebDriverWait(driver, 10);
       wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='m-layout__sidebar']//div[1]//a[2]//p[1]")));
   }
 
     @Test
-  public void testOpenCompanyProfilePageReturn403Error(){
+  public void testOpenCompanyProfilePageReturn403Error() throws Exception{
       driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/company");
 
       assertTrue(driver.findElement(By.xpath("//div[@class='m-access-error']//p[@class='c-text c-text--h1 a-color-dark m-access-error__title']"))
@@ -49,7 +52,7 @@ public class CheckingAvailabilityOfPagesForAccountantTests {
     }
 
   @Test
-  public void testOpenEditCompanyProfilePageReturn403Error(){
+  public void testOpenEditCompanyProfilePageReturn403Error() throws Exception{
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/company/edit");
 
     assertTrue(driver.findElement(By.xpath("//div[@class='m-access-error']//p[@class='c-text c-text--h1 a-color-dark m-access-error__title']"))
@@ -57,7 +60,7 @@ public class CheckingAvailabilityOfPagesForAccountantTests {
   }
 
   @Test
-  public void testOpenUserPageReturn403Error(){
+  public void testOpenUserPageReturn403Error() throws Exception{
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/users");
 
     assertTrue(driver.findElement(By.xpath("//div[@class='m-access-error']//p[@class='c-text c-text--h1 a-color-dark m-access-error__title']"))
@@ -65,7 +68,7 @@ public class CheckingAvailabilityOfPagesForAccountantTests {
   }
 
   @Test(enabled = false)//у бухгалтера есть доступ. этот момент до конца не согласован
-  public void testOpenDriverPageReturn403Error(){
+  public void testOpenDriverPageReturn403Error() throws Exception{
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/drivers");
 
     assertTrue(driver.findElement(By.xpath("//div[@class='m-access-error']//p[@class='c-text c-text--h1 a-color-dark m-access-error__title']"))
@@ -73,7 +76,7 @@ public class CheckingAvailabilityOfPagesForAccountantTests {
   }
 
   @Test
-  public void testSendRequestAct() {
+  public void testSendRequestAct() throws Exception{
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/documents/act");
     driver.findElement(By.xpath("//input[@placeholder='Select start of period']")).click();
     driver.findElement(By.xpath("//div[@class='flatpickr-monthSelect-months']//span[@class='flatpickr-monthSelect-month']")).click();
@@ -130,4 +133,14 @@ public class CheckingAvailabilityOfPagesForAccountantTests {
   public void tearDown(){
       driver.quit();
     }
+
+    private boolean isElementPresent(By by){
+      try {
+        driver.findElement(by);
+        return true;
+      } catch (NoSuchElementException e) {
+        return false;
+      }
+    }
+
   }

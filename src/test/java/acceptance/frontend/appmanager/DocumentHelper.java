@@ -14,12 +14,13 @@ public class DocumentHelper extends HelperBase{
 
 public void selectStartOfPeriod(){
    // type(By.xpath("//input[@placeholder='Select start of period']"), "Січень 2020");
-  click(By.xpath("//input[@placeholder='Select start of period']"));
+  click(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div[1]/div[1]/div[2]/div/div/span/div/label[1]/div/input"));
+
   click(By.xpath("//div[@class='flatpickr-monthSelect-months']//span[@class='flatpickr-monthSelect-month']"));
 }
 
   public void selectEndOfPeriod(){
-    click(By.xpath("//input[@placeholder='Select end of period']"));
+    click(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div[1]/div[1]/div[2]/div/div/span/div/label[2]/div/input"));
     click(By.xpath("//div[@class='flatpickr-calendar animate flatpickr-monthSelect-theme-red open arrowTop']//span[@class='flatpickr-monthSelect-month selected']"));
   }
 

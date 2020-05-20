@@ -16,13 +16,13 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.Assert.assertTrue;
 
 public class CheckingAvailabilityOfPagesForAccountantTests {
-    private WebDriver driver;
+  private WebDriver driver;
 
-    @BeforeClass(alwaysRun = true)
+  @BeforeClass(alwaysRun = true)
 
   public void setUp() throws Exception {
     driver = new ChromeDriver();
- //   driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
     Dimension d = new Dimension(1400, 877);
     driver.manage().window().setSize(d);
     driver.get("https://shell-b2b.test.aurocraft.com/uk/auth");
@@ -39,28 +39,28 @@ public class CheckingAvailabilityOfPagesForAccountantTests {
     driver.findElement(By.xpath("//input[@class='c-password__input']")).sendKeys(password);
     driver.findElement(By.xpath("//button[@class='c-button c-button--primary']")).click();
 
-      WebDriverWait wait = new WebDriverWait(driver, 10);
-      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='m-layout__sidebar']//div[1]//a[2]//p[1]")));
+    WebDriverWait wait = new WebDriverWait(driver, 10);
+    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='m-layout__sidebar']//div[1]//a[2]//p[1]")));
   }
 
-    @Test
-  public void testOpenCompanyProfilePageReturn403Error() throws Exception{
-      driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/company");
+  @Test(groups = {"accountant"}, dependsOnGroups = "createAccountant")
+  public void testOpenCompanyProfilePageReturn403Error() throws Exception {
+    driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/company");
 
-      assertTrue(driver.findElement(By.xpath("//div[@class='m-access-error']//p[@class='c-text c-text--h1 a-color-dark m-access-error__title']"))
-              .getText().contains("У вас недостатньо прав для доступу до цього розділу"));
-    }
+    assertTrue(driver.findElement(By.xpath("//div[@class='m-access-error']//p[@class='c-text c-text--h1 a-color-dark m-access-error__title']"))
+            .getText().contains("У вас недостатньо прав для доступу до цього розділу"));
+  }
 
-  @Test
-  public void testOpenEditCompanyProfilePageReturn403Error() throws Exception{
+  @Test(groups = {"accountant"}, dependsOnGroups = "createAccountant")
+  public void testOpenEditCompanyProfilePageReturn403Error() throws Exception {
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/company/edit");
 
     assertTrue(driver.findElement(By.xpath("//div[@class='m-access-error']//p[@class='c-text c-text--h1 a-color-dark m-access-error__title']"))
             .getText().contains("У вас недостатньо прав для доступу до цього розділу"));
   }
 
-  @Test
-  public void testOpenUserPageReturn403Error() throws Exception{
+  @Test(groups = {"accountant"}, dependsOnGroups = "createAccountant")
+  public void testOpenUserPageReturn403Error() throws Exception {
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/users");
 
     assertTrue(driver.findElement(By.xpath("//div[@class='m-access-error']//p[@class='c-text c-text--h1 a-color-dark m-access-error__title']"))
@@ -68,20 +68,30 @@ public class CheckingAvailabilityOfPagesForAccountantTests {
   }
 
   @Test(enabled = false)//у бухгалтера есть доступ. этот момент до конца не согласован
-  public void testOpenDriverPageReturn403Error() throws Exception{
+  public void testOpenDriverPageReturn403Error() throws Exception {
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/drivers");
 
     assertTrue(driver.findElement(By.xpath("//div[@class='m-access-error']//p[@class='c-text c-text--h1 a-color-dark m-access-error__title']"))
             .getText().contains("У вас недостатньо прав для доступу до цього розділу"));
   }
 
-  @Test
-  public void testSendRequestAct() throws Exception{
+  @Test(groups = {"accountant"}, dependsOnGroups = "createAccountant")
+  public void testSendRequestAct() throws Exception {
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/documents/act");
-    driver.findElement(By.xpath("//input[@placeholder='Select start of period']")).click();
+    driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div[1]/div[1]/div[2]/div/div/span/div/label[1]/div/input")).click();
     driver.findElement(By.xpath("//div[@class='flatpickr-monthSelect-months']//span[@class='flatpickr-monthSelect-month']")).click();
-    driver.findElement(By.xpath("//input[@placeholder='Select end of period']")).click();
+    driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div/div[1]/div[1]/div[2]/div/div/span/div/label[2]/div/input")).click();
     driver.findElement(By.xpath("//div[@class='flatpickr-calendar animate flatpickr-monthSelect-theme-red open arrowTop']//span[@class='flatpickr-monthSelect-month selected']")).click();
+    driver.findElement(By.xpath("//button[@class='c-button c-button--primary']//span[@class='c-button__label']")).click();
+    WebDriverWait wait = new WebDriverWait(driver, 10);
+    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='c-button c-button--alt']//span[@class='c-button__label']"))).click();
+
+  //  assertTrue(driver.findElement(By.xpath("//div[@class='c-page-header__content']//p[@class='c-text c-text--h1 a-color-dark c-page-header__title']")).getText().contains("Документи"));
+  }
+
+  @Test(groups = {"accountant"}, dependsOnGroups = "createAccountant")
+  public void testInvoiceCustomRequestWithCreditBargaining() throws Exception {
+    driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/documents/invoice/custom");
     driver.findElement(By.xpath("//button[@class='c-button c-button--primary']//span[@class='c-button__label']")).click();
     WebDriverWait wait = new WebDriverWait(driver, 10);
     wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='c-button c-button--alt']//span[@class='c-button__label']"))).click();
@@ -89,29 +99,19 @@ public class CheckingAvailabilityOfPagesForAccountantTests {
     assertTrue(driver.findElement(By.xpath("//div[@class='c-page-header__content']//p[@class='c-text c-text--h1 a-color-dark c-page-header__title']")).getText().contains("Документи"));
   }
 
- @Test
-  public void testInvoiceCustomRequestWithCreditBargaining() throws Exception {
-   driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/documents/invoice/custom");
-   driver.findElement(By.xpath("//button[@class='c-button c-button--primary']//span[@class='c-button__label']")).click();
-   WebDriverWait wait = new WebDriverWait(driver, 10);
-   wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='c-button c-button--alt']//span[@class='c-button__label']"))).click();
-
-   assertTrue(driver.findElement(By.xpath("//div[@class='c-page-header__content']//p[@class='c-text c-text--h1 a-color-dark c-page-header__title']")).getText().contains("Документи"));
-  }
-
-   @Test
+  @Test(groups = {"accountant"}, dependsOnGroups = "createAccountant")
   public void testInvoiceCustomRequestWithAnotherAmount() throws Exception {
-     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/documents/invoice/custom");
-     driver.findElement(By.xpath("//div[@class='c-bill-field']//label[2]//span[1]")).click();
-     driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div/label/div/label[2]/span[3]/input")).click();
-     driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div/label/div/label[2]/span[3]/input")).clear();
-     driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div/label/div/label[2]/span[3]/input")).sendKeys("150");
-     driver.findElement(By.xpath("//button[@class='c-button c-button--primary']//span[@class='c-button__label']")).click();
-     WebDriverWait wait = new WebDriverWait(driver, 10);
-     wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='c-button c-button--alt']//span[@class='c-button__label']"))).click();
+    driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/documents/invoice/custom");
+    driver.findElement(By.xpath("//div[@class='c-bill-field']//label[2]//span[1]")).click();
+    driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div/label/div/label[2]/span[3]/input")).click();
+    driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div/label/div/label[2]/span[3]/input")).clear();
+    driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div/label/div/label[2]/span[3]/input")).sendKeys("150");
+    driver.findElement(By.xpath("//button[@class='c-button c-button--primary']//span[@class='c-button__label']")).click();
+    WebDriverWait wait = new WebDriverWait(driver, 10);
+    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='c-button c-button--alt']//span[@class='c-button__label']"))).click();
 
-     assertTrue(driver.findElement(By.xpath("//div[@class='c-page-header__content']//p[@class='c-text c-text--h1 a-color-dark c-page-header__title']")).getText().contains("Документи"));
-   }
+    assertTrue(driver.findElement(By.xpath("//div[@class='c-page-header__content']//p[@class='c-text c-text--h1 a-color-dark c-page-header__title']")).getText().contains("Документи"));
+  }
 
 /*   @Test //подумать над решением
   public void testInvoiceCalculationRequest() throws Exception {
@@ -129,18 +129,18 @@ public class CheckingAvailabilityOfPagesForAccountantTests {
      assertTrue(driver.findElement(By.xpath("//div[@class='c-page-header__content']//p[@class='c-text c-text--h1 a-color-dark c-page-header__title']")).getText().contains("Документи"));
    }*/
 
-    @AfterClass(alwaysRun = true)
-  public void tearDown(){
-      driver.quit();
-    }
-
-    private boolean isElementPresent(By by){
-      try {
-        driver.findElement(by);
-        return true;
-      } catch (NoSuchElementException e) {
-        return false;
-      }
-    }
-
+  @AfterClass(alwaysRun = true)
+  public void tearDown() {
+    driver.quit();
   }
+
+  private boolean isElementPresent(By by) {
+    try {
+      driver.findElement(by);
+      return true;
+    } catch (NoSuchElementException e) {
+      return false;
+    }
+  }
+
+}

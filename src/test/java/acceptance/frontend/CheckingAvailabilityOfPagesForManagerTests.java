@@ -40,7 +40,7 @@ public class CheckingAvailabilityOfPagesForManagerTests {
     wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='m-layout__sidebar']//div[1]//a[2]//p[1]")));
   }
 
-  @Test
+  @Test (groups = {"manager"},dependsOnGroups = {"createManager"})
   public void testOpenCompanyProfilePageReturn403Error(){
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/company");
 
@@ -48,7 +48,7 @@ public class CheckingAvailabilityOfPagesForManagerTests {
             .getText().contains("У вас недостатньо прав для доступу до цього розділу"));
   }
 
-  @Test
+  @Test (groups = {"manager"},dependsOnGroups = {"createManager"})
   public void testOpenEditCompanyProfilePageReturn403Error(){
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/company/edit");
 
@@ -56,7 +56,7 @@ public class CheckingAvailabilityOfPagesForManagerTests {
             .getText().contains("У вас недостатньо прав для доступу до цього розділу"));
   }
 
-  @Test
+  @Test (groups = {"manager"},dependsOnGroups = {"createManager"})
   public void testOpenUserPageReturn403Error(){
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/users");
 
@@ -64,7 +64,7 @@ public class CheckingAvailabilityOfPagesForManagerTests {
             .getText().contains("У вас недостатньо прав для доступу до цього розділу"));
   }
 
-  @Test
+  @Test (groups = {"manager"},dependsOnGroups = {"createManager"})
   public void testOpenDocumentPageReturn403Error(){
     driver.navigate().to("https://shell-b2b.test.aurocraft.com/uk/documents");
 

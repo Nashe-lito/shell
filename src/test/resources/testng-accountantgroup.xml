@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Accountant" verbose="1" >
+    <test name="Accountan" >
+        <groups>
+                <run>
+                        <include name="accountant"/>
+                </run>
+        </groups>
+
+        <classes>
+            <class name="acceptance.frontend.CreateAccountantAndManagerTests" />
+            <class name="acceptance.frontend.CheckingAvailabilityOfPagesForAccountantTests" />
+        </classes>
+
+    </test>
+</suite>

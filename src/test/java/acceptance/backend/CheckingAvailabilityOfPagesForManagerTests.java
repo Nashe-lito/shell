@@ -167,11 +167,11 @@ public class CheckingAvailabilityOfPagesForManagerTests {
 
     driver.findElement(By.id("dateFrom")).click();
     driver.findElement(By.id("dateFrom")).clear();
-    driver.findElement(By.id("dateFrom")).sendKeys("2020-01-01");
+    driver.findElement(By.id("dateFrom")).sendKeys("01-01-2020");
 
     driver.findElement(By.id("dateTo")).click();
     driver.findElement(By.id("dateTo")).clear();
-    driver.findElement(By.id("dateTo")).sendKeys("2020-02-20");
+    driver.findElement(By.id("dateTo")).sendKeys("20-02-2020");
 
     driver.findElement(By.id("type")).click();
     new Select(driver.findElement(By.id("type"))).selectByValue("write-off");

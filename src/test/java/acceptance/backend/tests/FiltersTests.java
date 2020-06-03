@@ -58,8 +58,8 @@ public class FiltersTests extends TestBaseAdmin {
     appManager.getFilterHelper().fillFieldClientName("нек-сус");
     appManager.getFilterHelper().fillFieldcardNumber("2101039");
     appManager.getFilterHelper().fillFieldAzsName("АЗС WOG №47 м. Рівне, вул. Дубенська, 163 а");
-    appManager.getFilterHelper().fillFieldDateFrom("2020-01-01");
-    appManager.getFilterHelper().fillFieldDateTo("2020-02-20");
+    appManager.getFilterHelper().fillFieldDateFrom("01-01-2020");
+    appManager.getFilterHelper().fillFieldDateTo("20-02-2020");
     appManager.getFilterHelper().selectType("write-off");
     appManager.getFilterHelper().selectGamGroup();
     appManager.getFilterHelper().selectGam();

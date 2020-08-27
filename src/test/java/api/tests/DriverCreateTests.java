@@ -90,8 +90,6 @@ public class DriverCreateTests {
     return (driverdata);
   }
 
-
-  //  "middleName": "J" принимает. завести баг. после фикса отредактировать файл
   @Test(dataProvider = "getNegativeData")
   public void testSendPostWithActualDataReturn400(String firstName, String lastName, String middleName, String email, String phone, String carsNumber, String status, String note) {
       RestAssured.baseURI = "https://shell-b2b.test.aurocraft.com/api/v1";

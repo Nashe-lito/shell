@@ -62,8 +62,6 @@ public class ApplicationManager {
     driver.quit();
   }
 
-
-
   public UserHelper getUserHelper() {
     return userHelper;
   }
